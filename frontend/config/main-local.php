@@ -1,0 +1,36 @@
+<?php
+
+$config = [
+    'components' => [
+        'request' => [
+            // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
+            'cookieValidationKey' => 'UYwvohFv91UUJysCC7xblfOaVvJ6A8xz',
+        ],
+    ],
+    'modules' => [
+        'site' => [
+            'class' => 'frontend\modules\site\Module',
+        ],
+        'tool' => [
+            'class' => 'frontend\modules\tool\Module',
+        ],
+        'ajax' => [
+            'class' => 'frontend\modules\ajax\Module',
+        ],
+    ],
+];
+
+if (!YII_ENV_TEST) {
+    // configuration adjustments for 'dev' environment
+    $config['bootstrap'][] = 'debug';
+    $config['modules']['debug'] = [
+        'class' => 'yii\debug\Module',
+    ];
+
+    $config['bootstrap'][] = 'gii';
+    $config['modules']['gii'] = [
+        'class' => 'yii\gii\Module',
+    ];
+}
+
+return $config;
