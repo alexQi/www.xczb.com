@@ -9,6 +9,7 @@ namespace frontend\controllers;
 
 use yii\web\Controller;
 use common\components\MyBehavior;
+use yii\web\ForbiddenHttpException;
 
 class BaseController extends Controller
 {

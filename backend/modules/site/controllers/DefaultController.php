@@ -78,7 +78,7 @@ class DefaultController extends Controller
         $mysqlInfoPage = new Pagination(["totalCount" => count($mysqlStatus),"defaultPageSize" => 5]);
 
         $queue = yii::$app->beanstalk;
-        $tubes = $queue->listTubes();
+        $tubes = $queue->listTubes() ? $queue->listTubes() : array();
         $list  = [];
         foreach ($tubes as $key=>$val)
         {

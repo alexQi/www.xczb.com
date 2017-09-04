@@ -56,6 +56,7 @@ class SiteController extends BaseController
      */
     public function actionIndex()
     {
+        var_dump($_SERVER);
         return $this->render('index');
     }
 

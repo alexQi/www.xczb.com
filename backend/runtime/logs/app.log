@@ -187,3 +187,226 @@ Stack trace:
 #5 /opt/htdocs/oliu.online/backend/web/index.php(22): yii\base\Application->run()
 #6 {main}
 2017-08-31 09:09:26 [172.17.0.1][3][ij397p9vjh7cv4o97brsj1cenu][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 172.17.0.1
+2017-09-04 01:36:55 [172.17.0.1][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 172.17.0.1
+2017-09-04 01:36:57 [172.17.0.1][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 172.17.0.1
+    in /opt/htdocs/www.xczb.com/backend/views/layouts/main-login.php:26
+    in /opt/htdocs/www.xczb.com/backend/views/layouts/main.php:17
+    in /opt/htdocs/www.xczb.com/backend/modules/site/controllers/DefaultController.php:126
+2017-09-04 01:36:57 [172.17.0.1][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 172.17.0.1
+2017-09-04 01:39:01 [172.17.0.1][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 172.17.0.1
+2017-09-04 01:39:01 [172.17.0.1][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 172.17.0.1
+    in /opt/htdocs/www.xczb.com/backend/views/layouts/main-login.php:26
+    in /opt/htdocs/www.xczb.com/backend/views/layouts/main.php:17
+    in /opt/htdocs/www.xczb.com/backend/modules/site/controllers/DefaultController.php:126
+2017-09-04 01:39:01 [172.17.0.1][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 172.17.0.1
+2017-09-04 01:39:07 [172.17.0.1][-][qfdshqlmds55elum8s0knugqg8][error][yii\db\Exception] PDOException: SQLSTATE[HY000] [2002] No such file or directory in /opt/htdocs/www.xczb.com/vendor/yiisoft/yii2/db/Connection.php:630
+Stack trace:
+#0 /opt/htdocs/www.xczb.com/vendor/yiisoft/yii2/db/Connection.php(630): PDO->__construct('mysql:host=loca...', 'root', '123456', NULL)
+#1 /opt/htdocs/www.xczb.com/vendor/yiisoft/yii2/db/Connection.php(563): yii\db\Connection->createPdoInstance()
+#2 /opt/htdocs/www.xczb.com/vendor/yiisoft/yii2/db/Connection.php(896): yii\db\Connection->open()
+#3 /opt/htdocs/www.xczb.com/vendor/yiisoft/yii2/db/Connection.php(883): yii\db\Connection->getMasterPdo()
+#4 /opt/htdocs/www.xczb.com/vendor/yiisoft/yii2/db/Schema.php(483): yii\db\Connection->getSlavePdo()
+#5 /opt/htdocs/www.xczb.com/vendor/yiisoft/yii2/db/Connection.php(792): yii\db\Schema->quoteValue('alex')
+#6 /opt/htdocs/www.xczb.com/vendor/yiisoft/yii2/db/Command.php(175): yii\db\Connection->quoteValue('alex')
+#7 /opt/htdocs/www.xczb.com/vendor/yiisoft/yii2/db/Command.php(871): yii\db\Command->getRawSql()
+#8 /opt/htdocs/www.xczb.com/vendor/yiisoft/yii2/db/Command.php(376): yii\db\Command->queryInternal('fetch', NULL)
+#9 /opt/htdocs/www.xczb.com/vendor/yiisoft/yii2/db/Query.php(253): yii\db\Command->queryOne()
+#10 /opt/htdocs/www.xczb.com/vendor/yiisoft/yii2/db/ActiveQuery.php(295): yii\db\Query->one(NULL)
+#11 /opt/htdocs/www.xczb.com/vendor/yiisoft/yii2/db/BaseActiveRecord.php(107): yii\db\ActiveQuery->one()
+#12 /opt/htdocs/www.xczb.com/common/models/User.php(83): yii\db\BaseActiveRecord::findOne(Array)
+#13 /opt/htdocs/www.xczb.com/common/models/LoginForm.php(73): common\models\User::findByUsername('alex')
+#14 /opt/htdocs/www.xczb.com/common/models/LoginForm.php(44): common\models\LoginForm->getUser()
+#15 [internal function]: common\models\LoginForm->validatePassword('password', NULL, Object(yii\validators\InlineValidator))
+#16 /opt/htdocs/www.xczb.com/vendor/yiisoft/yii2/validators/InlineValidator.php(72): call_user_func(Array, 'password', NULL, Object(yii\validators\InlineValidator))
+#17 /opt/htdocs/www.xczb.com/vendor/yiisoft/yii2/validators/Validator.php(267): yii\validators\InlineValidator->validateAttribute(Object(common\models\LoginForm), 'password')
+#18 /opt/htdocs/www.xczb.com/vendor/yiisoft/yii2/base/Model.php(358): yii\validators\Validator->validateAttributes(Object(common\models\LoginForm), Array)
+#19 /opt/htdocs/www.xczb.com/common/models/LoginForm.php(58): yii\base\Model->validate()
+#20 /opt/htdocs/www.xczb.com/backend/modules/site/controllers/DefaultController.php(122): common\models\LoginForm->login()
+#21 [internal function]: backend\modules\site\controllers\DefaultController->actionLogin()
+#22 /opt/htdocs/www.xczb.com/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#23 /opt/htdocs/www.xczb.com/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#24 /opt/htdocs/www.xczb.com/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('login', Array)
+#25 /opt/htdocs/www.xczb.com/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('site/default/lo...', Array)
+#26 /opt/htdocs/www.xczb.com/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#27 /opt/htdocs/www.xczb.com/backend/web/index.php(22): yii\base\Application->run()
+#28 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000] [2002] No such file or directory in /opt/htdocs/www.xczb.com/vendor/yiisoft/yii2/db/Connection.php:568
+Stack trace:
+#0 /opt/htdocs/www.xczb.com/vendor/yiisoft/yii2/db/Connection.php(896): yii\db\Connection->open()
+#1 /opt/htdocs/www.xczb.com/vendor/yiisoft/yii2/db/Connection.php(883): yii\db\Connection->getMasterPdo()
+#2 /opt/htdocs/www.xczb.com/vendor/yiisoft/yii2/db/Schema.php(483): yii\db\Connection->getSlavePdo()
+#3 /opt/htdocs/www.xczb.com/vendor/yiisoft/yii2/db/Connection.php(792): yii\db\Schema->quoteValue('alex')
+#4 /opt/htdocs/www.xczb.com/vendor/yiisoft/yii2/db/Command.php(175): yii\db\Connection->quoteValue('alex')
+#5 /opt/htdocs/www.xczb.com/vendor/yiisoft/yii2/db/Command.php(871): yii\db\Command->getRawSql()
+#6 /opt/htdocs/www.xczb.com/vendor/yiisoft/yii2/db/Command.php(376): yii\db\Command->queryInternal('fetch', NULL)
+#7 /opt/htdocs/www.xczb.com/vendor/yiisoft/yii2/db/Query.php(253): yii\db\Command->queryOne()
+#8 /opt/htdocs/www.xczb.com/vendor/yiisoft/yii2/db/ActiveQuery.php(295): yii\db\Query->one(NULL)
+#9 /opt/htdocs/www.xczb.com/vendor/yiisoft/yii2/db/BaseActiveRecord.php(107): yii\db\ActiveQuery->one()
+#10 /opt/htdocs/www.xczb.com/common/models/User.php(83): yii\db\BaseActiveRecord::findOne(Array)
+#11 /opt/htdocs/www.xczb.com/common/models/LoginForm.php(73): common\models\User::findByUsername('alex')
+#12 /opt/htdocs/www.xczb.com/common/models/LoginForm.php(44): common\models\LoginForm->getUser()
+#13 [internal function]: common\models\LoginForm->validatePassword('password', NULL, Object(yii\validators\InlineValidator))
+#14 /opt/htdocs/www.xczb.com/vendor/yiisoft/yii2/validators/InlineValidator.php(72): call_user_func(Array, 'password', NULL, Object(yii\validators\InlineValidator))
+#15 /opt/htdocs/www.xczb.com/vendor/yiisoft/yii2/validators/Validator.php(267): yii\validators\InlineValidator->validateAttribute(Object(common\models\LoginForm), 'password')
+#16 /opt/htdocs/www.xczb.com/vendor/yiisoft/yii2/base/Model.php(358): yii\validators\Validator->validateAttributes(Object(common\models\LoginForm), Array)
+#17 /opt/htdocs/www.xczb.com/common/models/LoginForm.php(58): yii\base\Model->validate()
+#18 /opt/htdocs/www.xczb.com/backend/modules/site/controllers/DefaultController.php(122): common\models\LoginForm->login()
+#19 [internal function]: backend\modules\site\controllers\DefaultController->actionLogin()
+#20 /opt/htdocs/www.xczb.com/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#21 /opt/htdocs/www.xczb.com/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#22 /opt/htdocs/www.xczb.com/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('login', Array)
+#23 /opt/htdocs/www.xczb.com/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('site/default/lo...', Array)
+#24 /opt/htdocs/www.xczb.com/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#25 /opt/htdocs/www.xczb.com/backend/web/index.php(22): yii\base\Application->run()
+#26 {main}
+Additional Information:
+
+2017-09-04 01:39:07 [172.17.0.1][-][qfdshqlmds55elum8s0knugqg8][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 172.17.0.1
+2017-09-04 01:39:07 [172.17.0.1][-][qfdshqlmds55elum8s0knugqg8][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 172.17.0.1
+2017-09-04 01:39:41 [172.17.0.1][3][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 172.17.0.1
+2017-09-04 01:39:41 [172.17.0.1][3][9vd101847an1g4v3ifgnfauots][error][application] Pheanstalk\Exception\ConnectionException: Socket error 111: Connection refused (connecting to 127.0.0.1:11300) in /opt/htdocs/www.xczb.com/vendor/pda/pheanstalk/src/Socket/NativeSocket.php:45
+Stack trace:
+#0 /opt/htdocs/www.xczb.com/vendor/pda/pheanstalk/src/Connection.php(190): Pheanstalk\Socket\NativeSocket->__construct('127.0.0.1', 11300, 1, false)
+#1 /opt/htdocs/www.xczb.com/vendor/pda/pheanstalk/src/Connection.php(98): Pheanstalk\Connection->_getSocket()
+#2 /opt/htdocs/www.xczb.com/vendor/pda/pheanstalk/src/Pheanstalk.php(396): Pheanstalk\Connection->dispatchCommand(Object(Pheanstalk\Command\ListTubesCommand))
+#3 /opt/htdocs/www.xczb.com/vendor/pda/pheanstalk/src/Pheanstalk.php(112): Pheanstalk\Pheanstalk->_dispatch(Object(Pheanstalk\Command\ListTubesCommand))
+#4 [internal function]: Pheanstalk\Pheanstalk->listTubes()
+#5 /opt/htdocs/www.xczb.com/common/components/yii2beanstalk/Beanstalk.php(95): call_user_func_array(Array, Array)
+#6 /opt/htdocs/www.xczb.com/backend/modules/site/controllers/DefaultController.php(81): common\components\yii2beanstalk\Beanstalk->__call('listTubes', Array)
+#7 [internal function]: backend\modules\site\controllers\DefaultController->actionIndex()
+#8 /opt/htdocs/www.xczb.com/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#9 /opt/htdocs/www.xczb.com/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#10 /opt/htdocs/www.xczb.com/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('', Array)
+#11 /opt/htdocs/www.xczb.com/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('', Array)
+#12 /opt/htdocs/www.xczb.com/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 /opt/htdocs/www.xczb.com/backend/web/index.php(22): yii\base\Application->run()
+#14 {main}
+    in /opt/htdocs/www.xczb.com/common/components/yii2beanstalk/Beanstalk.php:111
+    in /opt/htdocs/www.xczb.com/backend/modules/site/controllers/DefaultController.php:81
+2017-09-04 01:39:41 [172.17.0.1][3][9vd101847an1g4v3ifgnfauots][error][yii\base\ErrorException:2] yii\base\ErrorException: Invalid argument supplied for foreach() in /opt/htdocs/www.xczb.com/backend/modules/site/controllers/DefaultController.php:83
+Stack trace:
+#0 /opt/htdocs/www.xczb.com/vendor/yiisoft/yii2/base/InlineAction.php(57): ::call_user_func_array:{/opt/htdocs/www.xczb.com/vendor/yiisoft/yii2/base/InlineAction.php:57}()
+#1 /opt/htdocs/www.xczb.com/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams()
+#2 /opt/htdocs/www.xczb.com/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction()
+#3 /opt/htdocs/www.xczb.com/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction()
+#4 /opt/htdocs/www.xczb.com/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest()
+#5 /opt/htdocs/www.xczb.com/backend/web/index.php(22): yii\base\Application->run()
+#6 {main}
+2017-09-04 01:39:41 [172.17.0.1][3][9vd101847an1g4v3ifgnfauots][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 172.17.0.1
+2017-09-04 01:41:23 [172.17.0.1][3][9vd101847an1g4v3ifgnfauots][error][application] Pheanstalk\Exception\ConnectionException: Socket error 111: Connection refused (connecting to 127.0.0.1:11300) in /opt/htdocs/www.xczb.com/vendor/pda/pheanstalk/src/Socket/NativeSocket.php:45
+Stack trace:
+#0 /opt/htdocs/www.xczb.com/vendor/pda/pheanstalk/src/Connection.php(190): Pheanstalk\Socket\NativeSocket->__construct('127.0.0.1', 11300, 1, false)
+#1 /opt/htdocs/www.xczb.com/vendor/pda/pheanstalk/src/Connection.php(98): Pheanstalk\Connection->_getSocket()
+#2 /opt/htdocs/www.xczb.com/vendor/pda/pheanstalk/src/Pheanstalk.php(396): Pheanstalk\Connection->dispatchCommand(Object(Pheanstalk\Command\ListTubesCommand))
+#3 /opt/htdocs/www.xczb.com/vendor/pda/pheanstalk/src/Pheanstalk.php(112): Pheanstalk\Pheanstalk->_dispatch(Object(Pheanstalk\Command\ListTubesCommand))
+#4 [internal function]: Pheanstalk\Pheanstalk->listTubes()
+#5 /opt/htdocs/www.xczb.com/common/components/yii2beanstalk/Beanstalk.php(95): call_user_func_array(Array, Array)
+#6 /opt/htdocs/www.xczb.com/backend/modules/site/controllers/DefaultController.php(81): common\components\yii2beanstalk\Beanstalk->__call('listTubes', Array)
+#7 [internal function]: backend\modules\site\controllers\DefaultController->actionIndex()
+#8 /opt/htdocs/www.xczb.com/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#9 /opt/htdocs/www.xczb.com/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#10 /opt/htdocs/www.xczb.com/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('', Array)
+#11 /opt/htdocs/www.xczb.com/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('', Array)
+#12 /opt/htdocs/www.xczb.com/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 /opt/htdocs/www.xczb.com/backend/web/index.php(22): yii\base\Application->run()
+#14 {main}
+    in /opt/htdocs/www.xczb.com/common/components/yii2beanstalk/Beanstalk.php:111
+    in /opt/htdocs/www.xczb.com/backend/modules/site/controllers/DefaultController.php:81
+2017-09-04 01:41:23 [172.17.0.1][3][9vd101847an1g4v3ifgnfauots][error][yii\base\ErrorException:8] yii\base\ErrorException: Undefined offset: 0 in /opt/htdocs/www.xczb.com/backend/modules/site/views/default/index.php:53
+Stack trace:
+#0 /opt/htdocs/www.xczb.com/vendor/yiisoft/yii2/base/View.php(250): yii\base\View->renderPhpFile()
+#1 /opt/htdocs/www.xczb.com/vendor/yiisoft/yii2/base/View.php(152): yii\base\View->renderFile()
+#2 /opt/htdocs/www.xczb.com/vendor/yiisoft/yii2/base/Controller.php(381): yii\base\View->render()
+#3 /opt/htdocs/www.xczb.com/backend/modules/site/controllers/DefaultController.php(101): yii\base\Controller->render()
+#4 /opt/htdocs/www.xczb.com/vendor/yiisoft/yii2/base/InlineAction.php(57): backend\modules\site\controllers\DefaultController->actionIndex()
+#5 /opt/htdocs/www.xczb.com/vendor/yiisoft/yii2/base/InlineAction.php(57): ::call_user_func_array:{/opt/htdocs/www.xczb.com/vendor/yiisoft/yii2/base/InlineAction.php:57}()
+#6 /opt/htdocs/www.xczb.com/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams()
+#7 /opt/htdocs/www.xczb.com/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction()
+#8 /opt/htdocs/www.xczb.com/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction()
+#9 /opt/htdocs/www.xczb.com/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest()
+#10 /opt/htdocs/www.xczb.com/backend/web/index.php(22): yii\base\Application->run()
+#11 {main}
+2017-09-04 01:41:23 [172.17.0.1][3][9vd101847an1g4v3ifgnfauots][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 172.17.0.1
+2017-09-04 01:44:26 [172.17.0.1][3][-][error][application] Pheanstalk\Exception\ConnectionException: Socket error 111: Connection refused (connecting to 127.0.0.1:11300) in /opt/htdocs/www.xczb.com/vendor/pda/pheanstalk/src/Socket/NativeSocket.php:45
+Stack trace:
+#0 /opt/htdocs/www.xczb.com/vendor/pda/pheanstalk/src/Connection.php(190): Pheanstalk\Socket\NativeSocket->__construct('127.0.0.1', 11300, 1, false)
+#1 /opt/htdocs/www.xczb.com/vendor/pda/pheanstalk/src/Connection.php(98): Pheanstalk\Connection->_getSocket()
+#2 /opt/htdocs/www.xczb.com/vendor/pda/pheanstalk/src/Pheanstalk.php(396): Pheanstalk\Connection->dispatchCommand(Object(Pheanstalk\Command\ListTubesCommand))
+#3 /opt/htdocs/www.xczb.com/vendor/pda/pheanstalk/src/Pheanstalk.php(112): Pheanstalk\Pheanstalk->_dispatch(Object(Pheanstalk\Command\ListTubesCommand))
+#4 [internal function]: Pheanstalk\Pheanstalk->listTubes()
+#5 /opt/htdocs/www.xczb.com/common/components/yii2beanstalk/Beanstalk.php(95): call_user_func_array(Array, Array)
+#6 /opt/htdocs/www.xczb.com/backend/modules/site/controllers/DefaultController.php(81): common\components\yii2beanstalk\Beanstalk->__call('listTubes', Array)
+#7 [internal function]: backend\modules\site\controllers\DefaultController->actionIndex()
+#8 /opt/htdocs/www.xczb.com/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#9 /opt/htdocs/www.xczb.com/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#10 /opt/htdocs/www.xczb.com/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('', Array)
+#11 /opt/htdocs/www.xczb.com/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('', Array)
+#12 /opt/htdocs/www.xczb.com/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 /opt/htdocs/www.xczb.com/backend/web/index.php(22): yii\base\Application->run()
+#14 {main}
+    in /opt/htdocs/www.xczb.com/common/components/yii2beanstalk/Beanstalk.php:111
+    in /opt/htdocs/www.xczb.com/backend/modules/site/controllers/DefaultController.php:81
+2017-09-04 01:44:27 [172.17.0.1][3][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 172.17.0.1
+    in /opt/htdocs/www.xczb.com/backend/views/layouts/main.php:181
+    in /opt/htdocs/www.xczb.com/backend/modules/site/controllers/DefaultController.php:101
+2017-09-04 01:44:27 [172.17.0.1][3][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 172.17.0.1
+2017-09-04 05:35:52 [172.17.0.1][3][-][error][application] Pheanstalk\Exception\ConnectionException: Socket error 111: Connection refused (connecting to 127.0.0.1:11300) in /opt/htdocs/www.xczb.com/vendor/pda/pheanstalk/src/Socket/NativeSocket.php:45
+Stack trace:
+#0 /opt/htdocs/www.xczb.com/vendor/pda/pheanstalk/src/Connection.php(190): Pheanstalk\Socket\NativeSocket->__construct('127.0.0.1', 11300, 1, false)
+#1 /opt/htdocs/www.xczb.com/vendor/pda/pheanstalk/src/Connection.php(98): Pheanstalk\Connection->_getSocket()
+#2 /opt/htdocs/www.xczb.com/vendor/pda/pheanstalk/src/Pheanstalk.php(396): Pheanstalk\Connection->dispatchCommand(Object(Pheanstalk\Command\ListTubesCommand))
+#3 /opt/htdocs/www.xczb.com/vendor/pda/pheanstalk/src/Pheanstalk.php(112): Pheanstalk\Pheanstalk->_dispatch(Object(Pheanstalk\Command\ListTubesCommand))
+#4 [internal function]: Pheanstalk\Pheanstalk->listTubes()
+#5 /opt/htdocs/www.xczb.com/common/components/yii2beanstalk/Beanstalk.php(95): call_user_func_array(Array, Array)
+#6 /opt/htdocs/www.xczb.com/backend/modules/site/controllers/DefaultController.php(81): common\components\yii2beanstalk\Beanstalk->__call('listTubes', Array)
+#7 [internal function]: backend\modules\site\controllers\DefaultController->actionIndex()
+#8 /opt/htdocs/www.xczb.com/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#9 /opt/htdocs/www.xczb.com/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#10 /opt/htdocs/www.xczb.com/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('', Array)
+#11 /opt/htdocs/www.xczb.com/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('', Array)
+#12 /opt/htdocs/www.xczb.com/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 /opt/htdocs/www.xczb.com/backend/web/index.php(22): yii\base\Application->run()
+#14 {main}
+    in /opt/htdocs/www.xczb.com/common/components/yii2beanstalk/Beanstalk.php:111
+    in /opt/htdocs/www.xczb.com/backend/modules/site/controllers/DefaultController.php:81
+2017-09-04 05:35:53 [172.17.0.1][3][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 172.17.0.1
+    in /opt/htdocs/www.xczb.com/backend/views/layouts/main.php:81
+    in /opt/htdocs/www.xczb.com/backend/modules/site/controllers/DefaultController.php:101
+2017-09-04 05:35:53 [172.17.0.1][3][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 172.17.0.1
+2017-09-04 05:36:01 [172.17.0.1][3][9vd101847an1g4v3ifgnfauots][warning][yii\gii\Module::checkAccess] Access to Gii is denied due to IP address restriction. The requested IP is 172.17.0.1
+2017-09-04 05:36:01 [172.17.0.1][3][9vd101847an1g4v3ifgnfauots][error][yii\web\HttpException:403] yii\web\ForbiddenHttpException: You are not allowed to access this page. in /opt/htdocs/www.xczb.com/vendor/yiisoft/yii2-gii/Module.php:112
+Stack trace:
+#0 /opt/htdocs/www.xczb.com/vendor/yiisoft/yii2/base/Controller.php(144): yii\gii\Module->beforeAction(Object(yii\base\InlineAction))
+#1 /opt/htdocs/www.xczb.com/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('index', Array)
+#2 /opt/htdocs/www.xczb.com/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('gii/default/ind...', Array)
+#3 /opt/htdocs/www.xczb.com/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#4 /opt/htdocs/www.xczb.com/backend/web/index.php(22): yii\base\Application->run()
+#5 {main}
+2017-09-04 05:36:01 [172.17.0.1][3][9vd101847an1g4v3ifgnfauots][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 172.17.0.1
+    in /opt/htdocs/www.xczb.com/backend/views/layouts/main.php:81
+2017-09-04 05:36:01 [172.17.0.1][3][9vd101847an1g4v3ifgnfauots][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 172.17.0.1
+2017-09-04 05:36:11 [172.17.0.1][3][9vd101847an1g4v3ifgnfauots][warning][yii\gii\Module::checkAccess] Access to Gii is denied due to IP address restriction. The requested IP is 172.17.0.1
+2017-09-04 05:36:11 [172.17.0.1][3][9vd101847an1g4v3ifgnfauots][error][yii\web\HttpException:403] yii\web\ForbiddenHttpException: You are not allowed to access this page. in /opt/htdocs/www.xczb.com/vendor/yiisoft/yii2-gii/Module.php:112
+Stack trace:
+#0 /opt/htdocs/www.xczb.com/vendor/yiisoft/yii2/base/Controller.php(144): yii\gii\Module->beforeAction(Object(yii\base\InlineAction))
+#1 /opt/htdocs/www.xczb.com/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('index', Array)
+#2 /opt/htdocs/www.xczb.com/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('gii/default/ind...', Array)
+#3 /opt/htdocs/www.xczb.com/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#4 /opt/htdocs/www.xczb.com/backend/web/index.php(22): yii\base\Application->run()
+#5 {main}
+2017-09-04 05:36:11 [172.17.0.1][3][9vd101847an1g4v3ifgnfauots][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 172.17.0.1
+    in /opt/htdocs/www.xczb.com/backend/views/layouts/main.php:81
+2017-09-04 05:36:11 [172.17.0.1][3][9vd101847an1g4v3ifgnfauots][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 172.17.0.1
+2017-09-04 07:31:58 [172.17.0.1][3][9vd101847an1g4v3ifgnfauots][warning][yii\gii\Module::checkAccess] Access to Gii is denied due to IP address restriction. The requested IP is 172.17.0.1
+2017-09-04 07:31:58 [172.17.0.1][3][9vd101847an1g4v3ifgnfauots][error][yii\web\HttpException:403] yii\web\ForbiddenHttpException: You are not allowed to access this page. in /opt/htdocs/www.xczb.com/vendor/yiisoft/yii2-gii/Module.php:112
+Stack trace:
+#0 /opt/htdocs/www.xczb.com/vendor/yiisoft/yii2/base/Controller.php(144): yii\gii\Module->beforeAction(Object(yii\base\InlineAction))
+#1 /opt/htdocs/www.xczb.com/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('index', Array)
+#2 /opt/htdocs/www.xczb.com/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('gii/default/ind...', Array)
+#3 /opt/htdocs/www.xczb.com/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#4 /opt/htdocs/www.xczb.com/backend/web/index.php(22): yii\base\Application->run()
+#5 {main}
+2017-09-04 07:31:58 [172.17.0.1][3][9vd101847an1g4v3ifgnfauots][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 172.17.0.1
+    in /opt/htdocs/www.xczb.com/backend/views/layouts/main.php:81
+2017-09-04 07:31:58 [172.17.0.1][3][9vd101847an1g4v3ifgnfauots][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 172.17.0.1

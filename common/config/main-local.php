@@ -4,9 +4,9 @@ return [
     'components' => [
         'db' => [
             'class' => 'yii\db\Connection',
-            'dsn'   => 'mysql:host=www.oliu.online;dbname=zcg;port=3306',
-            'username' => 'alex',
-            'password' => 'woshishei',
+            'dsn'   => 'mysql:host=192.168.13.56;dbname=zcg;port=3306',
+            'username' => 'root',
+            'password' => '123456',
             'charset'  => 'utf8',
             'tablePrefix' => 'pre_',
         ],

@@ -50,6 +50,7 @@ $this->params['breadcrumbs'][] = $this->title;
                         <td><?php
                             exec("git status", $info);
                             exec("du -hs ../", $a);
+                            $info[0] = 'v1.0.0';
                             echo $info[0] . '&nbsp;'.'体积:' . str_replace("../","",$a[0]);
                             ?>
 
