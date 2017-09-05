@@ -14,6 +14,9 @@ return [
     'language'=> 'zh-CN',
     'homeUrl' => '/site/default/index',
     "modules" => [
+        "activity" => [
+            "class" => "backend\modules\activity\Module",
+        ],
         "admin" => [
             "class" => "backend\modules\admin\Module",
         ],
