@@ -10,7 +10,7 @@ use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 
 /**
- * ActivityAdvertController implements the CRUD actions for ActivityAdvert model.
+ * AdvertController implements the CRUD actions for ActivityAdvert model.
  */
 class AdvertController extends Controller
 {
