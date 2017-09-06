@@ -10,14 +10,17 @@ use yii\grid\GridView;
 $this->title = 'Activity Bases';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="activity-base-index">
+<div class="row">
+    <div class="col-xs-12">
+        <div class="box box-info">
+            <div class="box-header with-border">
+                <h3 class="box-title"><?= Html::encode($this->title) ?></h3>
 
-    <h1><?= Html::encode($this->title) ?></h1>
-    <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
-
-    <p>
+                <div class="box-tools">
         <?= Html::a('Create Activity Base', ['create'], ['class' => 'btn btn-success']) ?>
-    </p>
+                </div>
+            </div>
+            <div class="box-body">
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
         'filterModel' => $searchModel,
@@ -39,4 +42,7 @@ $this->params['breadcrumbs'][] = $this->title;
             ['class' => 'yii\grid\ActionColumn'],
         ],
     ]); ?>
+            </div>
+        </div>
+    </div>
 </div>

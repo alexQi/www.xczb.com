@@ -4,10 +4,10 @@ use yii\helpers\Html;
 use yii\grid\GridView;
 
 /* @var $this yii\web\View */
-/* @var $searchModel backend\models\ApplyRecordSearch */
+/* @var $searchModel backend\models\ActivityAdvertSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Apply Records';
+$this->title = 'Activity Adverts';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="row">
@@ -17,7 +17,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 <h3 class="box-title"><?= Html::encode($this->title) ?></h3>
 
                 <div class="box-tools">
-        <?= Html::a('Create Apply Record', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('Create Activity Advert', ['create'], ['class' => 'btn btn-success']) ?>
                 </div>
             </div>
             <div class="box-body">
@@ -28,13 +28,13 @@ $this->params['breadcrumbs'][] = $this->title;
             ['class' => 'yii\grid\SerialColumn'],
 
             'id',
-            'apply_name',
-            'gender',
-            'phone',
-            'self_desc',
-            // 'self_picture',
-            // 'self_media',
-            // 'recommend',
+            'advert_title',
+            'type',
+            'file_url:url',
+            'activity_id',
+            // 'link_url:url',
+            // 'target',
+            // 'user_id',
             // 'status',
             // 'created_at',
             // 'updated_at',

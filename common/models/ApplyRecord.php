@@ -14,6 +14,7 @@ use Yii;
  * @property string $self_desc
  * @property string $self_picture
  * @property string $self_media
+ * @property string $recommend
  * @property integer $status
  * @property integer $created_at
  * @property integer $updated_at
@@ -38,6 +39,7 @@ class ApplyRecord extends \yii\db\ActiveRecord
             [['gender', 'phone', 'status', 'created_at', 'updated_at'], 'integer'],
             [['apply_name'], 'string', 'max' => 20],
             [['self_desc', 'self_picture', 'self_media'], 'string', 'max' => 255],
+            [['recommend'], 'string', 'max' => 100],
         ];
     }
 
@@ -54,6 +56,7 @@ class ApplyRecord extends \yii\db\ActiveRecord
             'self_desc' => '自我介绍',
             'self_picture' => '照片',
             'self_media' => '语音',
+            'recommend' => '推荐单位',
             'status' => '状态 1待审核 2已通过',
             'created_at' => '创建时间',
             'updated_at' => '更新时间',

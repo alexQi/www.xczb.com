@@ -5,12 +5,12 @@ namespace backend\models;
 use Yii;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use common\models\ApplyRecord;
+use common\models\ActivityAdvert;
 
 /**
- * ApplyRecordSearch represents the model behind the search form about `common\models\ApplyRecord`.
+ * ActivityAdvertSearch represents the model behind the search form about `common\models\ActivityAdvert`.
  */
-class ApplyRecordSearch extends ApplyRecord
+class ActivityAdvertSearch extends ActivityAdvert
 {
     /**
      * @inheritdoc
@@ -18,8 +18,8 @@ class ApplyRecordSearch extends ApplyRecord
     public function rules()
     {
         return [
-            [['id', 'gender', 'phone', 'status', 'created_at', 'updated_at'], 'integer'],
-            [['apply_name', 'self_desc', 'self_picture', 'self_media', 'recommend'], 'safe'],
+            [['id', 'type', 'activity_id', 'target', 'user_id', 'status', 'created_at', 'updated_at'], 'integer'],
+            [['advert_title', 'file_url', 'link_url'], 'safe'],
         ];
     }
 
@@ -41,7 +41,7 @@ class ApplyRecordSearch extends ApplyRecord
      */
     public function search($params)
     {
-        $query = ApplyRecord::find();
+        $query = ActivityAdvert::find();
 
         // add conditions that should always apply here
 
@@ -60,18 +60,18 @@ class ApplyRecordSearch extends ApplyRecord
         // grid filtering conditions
         $query->andFilterWhere([
             'id' => $this->id,
-            'gender' => $this->gender,
-            'phone' => $this->phone,
+            'type' => $this->type,
+            'activity_id' => $this->activity_id,
+            'target' => $this->target,
+            'user_id' => $this->user_id,
             'status' => $this->status,
             'created_at' => $this->created_at,
             'updated_at' => $this->updated_at,
         ]);
 
-        $query->andFilterWhere(['like', 'apply_name', $this->apply_name])
-            ->andFilterWhere(['like', 'self_desc', $this->self_desc])
-            ->andFilterWhere(['like', 'self_picture', $this->self_picture])
-            ->andFilterWhere(['like', 'self_media', $this->self_media])
-            ->andFilterWhere(['like', 'recommend', $this->recommend]);
+        $query->andFilterWhere(['like', 'advert_title', $this->advert_title])
+            ->andFilterWhere(['like', 'file_url', $this->file_url])
+            ->andFilterWhere(['like', 'link_url', $this->link_url]);
 
         return $dataProvider;
     }

@@ -4,13 +4,13 @@ use yii\helpers\Html;
 use yii\widgets\DetailView;
 
 /* @var $this yii\web\View */
-/* @var $model common\models\ApplyRecord */
+/* @var $model common\models\ActivityAdvert */
 
 $this->title = $model->id;
-$this->params['breadcrumbs'][] = ['label' => 'Apply Records', 'url' => ['index']];
+$this->params['breadcrumbs'][] = ['label' => 'Activity Adverts', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="apply-record-view">
+<div class="activity-advert-view">
 
     <h1><?= Html::encode($this->title) ?></h1>
 
@@ -29,13 +29,13 @@ $this->params['breadcrumbs'][] = $this->title;
         'model' => $model,
         'attributes' => [
             'id',
-            'apply_name',
-            'gender',
-            'phone',
-            'self_desc',
-            'self_picture',
-            'self_media',
-            'recommend',
+            'advert_title',
+            'type',
+            'file_url:url',
+            'activity_id',
+            'link_url:url',
+            'target',
+            'user_id',
             'status',
             'created_at',
             'updated_at',

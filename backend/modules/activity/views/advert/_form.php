@@ -4,27 +4,27 @@ use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 
 /* @var $this yii\web\View */
-/* @var $model common\models\ApplyRecord */
+/* @var $model common\models\ActivityAdvert */
 /* @var $form yii\widgets\ActiveForm */
 ?>
 
-<div class="apply-record-form">
+<div class="activity-advert-form">
 
     <?php $form = ActiveForm::begin(); ?>
 
-    <?= $form->field($model, 'apply_name')->textInput(['maxlength' => true]) ?>
+    <?= $form->field($model, 'advert_title')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'gender')->textInput() ?>
+    <?= $form->field($model, 'type')->textInput() ?>
 
-    <?= $form->field($model, 'phone')->textInput() ?>
+    <?= $form->field($model, 'file_url')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'self_desc')->textInput(['maxlength' => true]) ?>
+    <?= $form->field($model, 'activity_id')->textInput() ?>
 
-    <?= $form->field($model, 'self_picture')->textInput(['maxlength' => true]) ?>
+    <?= $form->field($model, 'link_url')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'self_media')->textInput(['maxlength' => true]) ?>
+    <?= $form->field($model, 'target')->textInput() ?>
 
-    <?= $form->field($model, 'recommend')->textInput(['maxlength' => true]) ?>
+    <?= $form->field($model, 'user_id')->textInput() ?>
 
     <?= $form->field($model, 'status')->textInput() ?>
 

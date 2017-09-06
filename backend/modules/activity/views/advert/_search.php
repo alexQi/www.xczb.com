@@ -4,11 +4,11 @@ use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 
 /* @var $this yii\web\View */
-/* @var $model backend\models\ApplyRecordSearch */
+/* @var $model backend\models\ActivityAdvertSearch */
 /* @var $form yii\widgets\ActiveForm */
 ?>
 
-<div class="apply-record-search">
+<div class="activity-advert-search">
 
     <?php $form = ActiveForm::begin([
         'action' => ['index'],
@@ -17,19 +17,19 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'id') ?>
 
-    <?= $form->field($model, 'apply_name') ?>
+    <?= $form->field($model, 'advert_title') ?>
 
-    <?= $form->field($model, 'gender') ?>
+    <?= $form->field($model, 'type') ?>
 
-    <?= $form->field($model, 'phone') ?>
+    <?= $form->field($model, 'file_url') ?>
 
-    <?= $form->field($model, 'self_desc') ?>
+    <?= $form->field($model, 'activity_id') ?>
 
-    <?php // echo $form->field($model, 'self_picture') ?>
+    <?php // echo $form->field($model, 'link_url') ?>
 
-    <?php // echo $form->field($model, 'self_media') ?>
+    <?php // echo $form->field($model, 'target') ?>
 
-    <?php // echo $form->field($model, 'recommend') ?>
+    <?php // echo $form->field($model, 'user_id') ?>
 
     <?php // echo $form->field($model, 'status') ?>
 
