@@ -2,6 +2,7 @@
 
 namespace backend\models;
 
+use common\models\ActivityBase;
 use Yii;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
@@ -12,6 +13,7 @@ use common\models\ActivityAdvert;
  */
 class ActivityAdvertSearch extends ActivityAdvert
 {
+    public $title;
     /**
      * @inheritdoc
      */
@@ -41,7 +43,10 @@ class ActivityAdvertSearch extends ActivityAdvert
      */
     public function search($params)
     {
-        $query = ActivityAdvert::find();
+        $query = ActivityAdvertSearch::find();
+        $query->select('aa.*,ab.title');
+        $query->from(['aa'=>ActivityAdvert::tableName()]);
+        $query->leftJoin(['ab'=>ActivityBase::tableName()],'aa.activity_id=ab.id');
 
         // add conditions that should always apply here
 
@@ -59,14 +64,13 @@ class ActivityAdvertSearch extends ActivityAdvert
 
         // grid filtering conditions
         $query->andFilterWhere([
-            'id' => $this->id,
-            'type' => $this->type,
-            'activity_id' => $this->activity_id,
-            'target' => $this->target,
-            'user_id' => $this->user_id,
-            'status' => $this->status,
-            'created_at' => $this->created_at,
-            'updated_at' => $this->updated_at,
+            'aa.id' => $this->id,
+            'aa.type' => $this->type,
+            'ab.title' => $this->title,
+            'aa.target' => $this->target,
+            'aa.user_id' => $this->user_id,
+            'aa.status' => $this->status,
+            'aa.updated_at' => $this->updated_at,
         ]);
 
         $query->andFilterWhere(['like', 'advert_title', $this->advert_title])

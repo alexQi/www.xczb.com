@@ -2,6 +2,8 @@
 
 namespace backend\modules\activity\controllers;
 
+use backend\models\ActivityBaseSearch;
+use common\models\ActivityBase;
 use Yii;
 use common\models\ActivityAdvert;
 use backend\models\ActivityAdvertSearch;
@@ -39,7 +41,7 @@ class AdvertController extends Controller
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
         return $this->render('index', [
-            'searchModel' => $searchModel,
+            'searchModel'  => $searchModel,
             'dataProvider' => $dataProvider,
         ]);
     }
@@ -63,6 +65,7 @@ class AdvertController extends Controller
      */
     public function actionCreate()
     {
+        $activityList = ActivityBaseSearch::find();
         $model = new ActivityAdvert();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {

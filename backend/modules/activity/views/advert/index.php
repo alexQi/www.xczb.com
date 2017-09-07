@@ -2,12 +2,13 @@
 
 use yii\helpers\Html;
 use yii\grid\GridView;
+use yii\helpers\Url;
 
 /* @var $this yii\web\View */
 /* @var $searchModel backend\models\ActivityAdvertSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Activity Adverts';
+$this->title = '活动广告列表';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="row">
@@ -17,7 +18,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 <h3 class="box-title"><?= Html::encode($this->title) ?></h3>
 
                 <div class="box-tools">
-        <?= Html::a('Create Activity Advert', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('添加广告', ['create'], ['class' => 'btn btn-success']) ?>
                 </div>
             </div>
             <div class="box-body">
@@ -29,15 +30,53 @@ $this->params['breadcrumbs'][] = $this->title;
 
             'id',
             'advert_title',
-            'type',
+            [
+                'label' => '类型',
+                'attribute'=>'type',
+                'format' => 'html',
+                'value'=>function ($model) {
+                    $string = $model->type==1 ? '图片' : '视频';
+                    $class  = $model->type==1 ? 'danger' : 'success';
+                    $html   ='<span class="label label-'.$class.'">'.$string.'</span>';
+                    return $html;
+                },
+                'filter' => ['1'=>'图片','2'=>'视频'], //筛选的数据
+                "headerOptions" => [
+                    "width" => "80"
+                ],
+            ],
             'file_url:url',
-            'activity_id',
-            // 'link_url:url',
-            // 'target',
-            // 'user_id',
-            // 'status',
-            // 'created_at',
-            // 'updated_at',
+            [
+                'label' => '所属活动',
+                'attribute'=>'title',
+                'format' => 'html',
+                'value'=>function ($model) {
+                    return Html::a($model->title,['default/view','id'=>$model->id]);
+                },
+                "headerOptions" => [
+                    "width" => "80"
+                ],
+            ],
+            [
+                'label' => '状态',
+                'attribute'=>'status',
+                'format' => 'html',
+                'value'=>function ($model) {
+                    $string = $model->status==1 ? '禁用' : '启用';
+                    $class  = $model->status==1 ? 'danger' : 'success';
+                    $html   ='<span class="label label-'.$class.'">'.$string.'</span>';
+                    return $html;
+                },
+                'filter' => ['1'=>'禁用','2'=>'启用'], //筛选的数据
+                "headerOptions" => [
+                    "width" => "80"
+                ],
+            ],
+            [
+                'label' => '更新时间',
+                'attribute'=>'updated_at',
+                'format' => ['date','Y-m-d H:i'],
+            ],
 
             ['class' => 'yii\grid\ActionColumn'],
         ],

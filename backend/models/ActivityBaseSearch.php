@@ -11,7 +11,7 @@ use common\models\ActivityBase;
 /**
  * activityBaseSearch represents the model behind the search form about `common\models\ActivityBase`.
  */
-class activityBaseSearch extends ActivityBase
+class ActivityBaseSearch extends ActivityBase
 {
     public $username;
 
@@ -44,7 +44,7 @@ class activityBaseSearch extends ActivityBase
      */
     public function search($params)
     {
-        $query = activityBaseSearch::find();
+        $query = ActivityBaseSearch::find();
         $query->select('ab.*,u.username');
         $query->from(['ab' => ActivityBase::tableName()]);
         $query->leftJoin(['u' => User::tableName()],'u.id=ab.user_id');

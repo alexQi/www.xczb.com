@@ -51,7 +51,7 @@ class ActivityAdvert extends \yii\db\ActiveRecord
             'id' => 'id',
             'advert_title' => '标题',
             'type' => '类型 1 图片 2 视频',
-            'file_url' => '链接地址',
+            'file_url' => '素材地址',
             'activity_id' => '关联的活动id',
             'link_url' => '链接地址',
             'target' => '打开方式',
