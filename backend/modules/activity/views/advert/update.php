@@ -5,9 +5,9 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 /* @var $model common\models\ActivityAdvert */
 
-$this->title = 'Update Activity Advert: ' . $model->id;
-$this->params['breadcrumbs'][] = ['label' => 'Activity Adverts', 'url' => ['index']];
-$this->params['breadcrumbs'][] = ['label' => $model->id, 'url' => ['view', 'id' => $model->id]];
+$this->title = 'Update Activity Advert: ' . $model->advert_title;
+$this->params['breadcrumbs'][] = ['label' => '广告列表', 'url' => ['index']];
+$this->params['breadcrumbs'][] = ['label' => $model->advert_title, 'url' => ['view', 'id' => $model->id]];
 $this->params['breadcrumbs'][] = 'Update';
 ?>
 <div class="row">

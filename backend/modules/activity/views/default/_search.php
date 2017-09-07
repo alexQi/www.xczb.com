@@ -17,7 +17,7 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'id') ?>
 
-    <?= $form->field($model, 'tilte') ?>
+    <?= $form->field($model, 'title') ?>
 
     <?= $form->field($model, 'activity_desc') ?>
 

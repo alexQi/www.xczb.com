@@ -2,13 +2,14 @@
 
 use yii\helpers\Html;
 
+
 /* @var $this yii\web\View */
 /* @var $model common\models\ActivityBase */
 
-$this->title = 'Update Activity Base: ' . $model->id;
-$this->params['breadcrumbs'][] = ['label' => 'Activity Bases', 'url' => ['index']];
-$this->params['breadcrumbs'][] = ['label' => $model->id, 'url' => ['view', 'id' => $model->id]];
-$this->params['breadcrumbs'][] = 'Update';
+$this->title = '创建新活动';
+$this->params['breadcrumbs'][] = ['label' => '活动列表', 'url' => ['index']];
+$this->params['breadcrumbs'][] = $this->title;
+
 ?>
 <div class="row">
     <div class="col-xs-12">
@@ -17,9 +18,9 @@ $this->params['breadcrumbs'][] = 'Update';
                 <h3 class="box-title"><?= Html::encode($this->title) ?></h3>
             </div>
             <div class="box-body">
-                <?= $this->render('_form', [
+            <?= $this->render('_form', [
                 'model' => $model,
-                ]) ?>
+            ]) ?>
             </div>
         </div>
     </div>

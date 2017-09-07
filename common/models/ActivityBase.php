@@ -8,7 +8,7 @@ use Yii;
  * This is the model class for table "{{%activity_base}}".
  *
  * @property integer $id
- * @property string $tilte
+ * @property string $title
  * @property string $activity_desc
  * @property string $activity_rules
  * @property integer $start_time
@@ -35,9 +35,9 @@ class ActivityBase extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['tilte', 'activity_desc', 'activity_rules', 'start_time', 'end_time', 'user_id', 'created_at', 'updated_at'], 'required'],
-            [['start_time', 'end_time', 'status', 'is_delete', 'user_id', 'created_at', 'updated_at'], 'integer'],
-            [['tilte'], 'string', 'max' => 100],
+            [['title', 'activity_desc', 'activity_rules', 'start_time', 'end_time', 'user_id', 'created_at', 'updated_at'], 'required'],
+            [['status', 'is_delete', 'user_id', 'created_at', 'updated_at'], 'integer'],
+            [['title'], 'string', 'max' => 100],
             [['activity_desc', 'activity_rules'], 'string', 'max' => 255],
         ];
     }
@@ -49,7 +49,7 @@ class ActivityBase extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'id',
-            'tilte' => '标题',
+            'title' => '标题',
             'activity_desc' => '活动简介',
             'activity_rules' => '活动规则',
             'start_time' => '开始时间',

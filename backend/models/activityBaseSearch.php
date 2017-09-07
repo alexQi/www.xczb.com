@@ -2,6 +2,7 @@
 
 namespace backend\models;
 
+use backend\modules\admin\models\User;
 use Yii;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
@@ -12,6 +13,8 @@ use common\models\ActivityBase;
  */
 class activityBaseSearch extends ActivityBase
 {
+    public $username;
+
     /**
      * @inheritdoc
      */
@@ -19,7 +22,7 @@ class activityBaseSearch extends ActivityBase
     {
         return [
             [['id', 'start_time', 'end_time', 'status', 'is_delete', 'user_id', 'created_at', 'updated_at'], 'integer'],
-            [['tilte', 'activity_desc', 'activity_rules'], 'safe'],
+            [['title', 'activity_desc', 'activity_rules','username'], 'safe'],
         ];
     }
 
@@ -41,7 +44,10 @@ class activityBaseSearch extends ActivityBase
      */
     public function search($params)
     {
-        $query = ActivityBase::find();
+        $query = activityBaseSearch::find();
+        $query->select('ab.*,u.username');
+        $query->from(['ab' => ActivityBase::tableName()]);
+        $query->leftJoin(['u' => User::tableName()],'u.id=ab.user_id');
 
         // add conditions that should always apply here
 
@@ -49,29 +55,45 @@ class activityBaseSearch extends ActivityBase
             'query' => $query,
         ]);
 
+        $dataProvider->setSort([
+            'attributes' => [
+                'id',
+                'title',
+                'start_time',
+                'end_time',
+                'status',
+                'created_at',
+                'username' => [
+                    'asc'   => ['u.username' => SORT_ASC],
+                    'desc'  => ['u.username' => SORT_DESC],
+                    'label' => '操作人'
+                ],
+                /*=============*/
+            ]
+        ]);
+        if (!empty($params))
+        {
+            $params['activityBaseSearch']['start_time'] = strtotime($params['activityBaseSearch']['start_time']);
+            $params['activityBaseSearch']['end_time']   = strtotime($params['activityBaseSearch']['end_time']);
+
+        }
         $this->load($params);
 
         if (!$this->validate()) {
-            // uncomment the following line if you do not want to return any records when validation fails
-            // $query->where('0=1');
             return $dataProvider;
         }
 
         // grid filtering conditions
         $query->andFilterWhere([
-            'id' => $this->id,
-            'start_time' => $this->start_time,
-            'end_time' => $this->end_time,
-            'status' => $this->status,
-            'is_delete' => $this->is_delete,
-            'user_id' => $this->user_id,
-            'created_at' => $this->created_at,
-            'updated_at' => $this->updated_at,
-        ]);
-
-        $query->andFilterWhere(['like', 'tilte', $this->tilte])
-            ->andFilterWhere(['like', 'activity_desc', $this->activity_desc])
-            ->andFilterWhere(['like', 'activity_rules', $this->activity_rules]);
+            'ab.id' => $this->id,
+            'ab.start_time' => $this->start_time,
+            'ab.end_time' => $this->end_time,
+            'ab.status' => $this->status,
+            'u.username' => $this->username,
+            'ab.created_at' => $this->created_at,
+            'ab.updated_at' => $this->updated_at,
+        ])
+            ->andFilterWhere(['like', 'title', $this->title]);
 
         return $dataProvider;
     }
