@@ -36,12 +36,34 @@ $this->params['breadcrumbs'][] = $this->title;
                         'title',
                         'activity_desc',
                         'activity_rules',
-                        'start_time:datetime',
-                        'end_time:datetime',
-                        'status',
-                        'user_id',
-                        'created_at:datetime',
-                        'updated_at:datetime',
+                        [
+                            'label' => '活动周期',
+                            'format' => 'html',
+                            'value' => function($model)
+                            {
+                                return date('Y-m-d H:i',$model->start_time).' -- '.date('Y-m-d H:i',$model->end_time);
+                            }
+                        ],
+                        [
+                            'label' => '状态',
+                            'attribute'=>'status',
+                            'format' => 'html',
+                            'value'=>function ($model) {
+                                $string = $model->status==1 ? '禁用' : '启用';
+                                $class  = $model->status==1 ? 'danger' : 'success';
+                                $html   ='<span class="label label-'.$class.'">'.$string.'</span>';
+                                return $html;
+                            },
+                            'filter' => ['1'=>'禁用','2'=>'启用'], //筛选的数据
+                            "headerOptions" => [
+                                "width" => "80"
+                            ],
+                        ],
+                        [
+                            'label' => '创建时间',
+                            'attribute'=>'created_at',
+                            'format' => ['date','Y-m-d H:i'],
+                        ],
                     ],
                 ]) ?>
                 </div>

@@ -68,15 +68,14 @@ class activityBaseSearch extends ActivityBase
                     'desc'  => ['u.username' => SORT_DESC],
                     'label' => '操作人'
                 ],
-                /*=============*/
             ]
         ]);
-        if (!empty($params))
-        {
-            $params['activityBaseSearch']['start_time'] = strtotime($params['activityBaseSearch']['start_time']);
-            $params['activityBaseSearch']['end_time']   = strtotime($params['activityBaseSearch']['end_time']);
-
-        }
+//        if (!empty($params))
+//        {
+//            $params['activityBaseSearch']['start_time'] = strtotime($params['activityBaseSearch']['start_time']);
+//            $params['activityBaseSearch']['end_time']   = strtotime($params['activityBaseSearch']['end_time']);
+//
+//        }
         $this->load($params);
 
         if (!$this->validate()) {
