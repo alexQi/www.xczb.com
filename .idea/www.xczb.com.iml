@@ -21,6 +21,7 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/codeception/base" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/codeception/verify" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/composer" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/crazyfd/yii2-qiniu" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/dmstr/yii2-adminlte-asset" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/doctrine/instantiator" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/ezyang/htmlpurifier" />
@@ -31,6 +32,7 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/kartik-v/yii2-krajee-base" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/kartik-v/yii2-widget-datepicker" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/kartik-v/yii2-widget-fileinput" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/mdmsoft/yii2-admin" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/myclabs/deep-copy" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/pda/pheanstalk" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/phpdocumentor/reflection-common" />
@@ -69,6 +71,7 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/finder" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/polyfill-mbstring" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/yaml" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/udokmeci/yii2-beanstalk" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/webmozart/assert" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/yiisoft/yii2" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/yiisoft/yii2-bootstrap" />
@@ -112,6 +115,7 @@
           <root url="file://$MODULE_DIR$/vendor/codeception/base" />
           <root url="file://$MODULE_DIR$/vendor/codeception/verify" />
           <root url="file://$MODULE_DIR$/vendor/composer" />
+          <root url="file://$MODULE_DIR$/vendor/crazyfd/yii2-qiniu" />
           <root url="file://$MODULE_DIR$/vendor/dmstr/yii2-adminlte-asset" />
           <root url="file://$MODULE_DIR$/vendor/doctrine/instantiator" />
           <root url="file://$MODULE_DIR$/vendor/ezyang/htmlpurifier" />
@@ -122,6 +126,7 @@
           <root url="file://$MODULE_DIR$/vendor/kartik-v/yii2-krajee-base" />
           <root url="file://$MODULE_DIR$/vendor/kartik-v/yii2-widget-datepicker" />
           <root url="file://$MODULE_DIR$/vendor/kartik-v/yii2-widget-fileinput" />
+          <root url="file://$MODULE_DIR$/vendor/mdmsoft/yii2-admin" />
           <root url="file://$MODULE_DIR$/vendor/myclabs/deep-copy" />
           <root url="file://$MODULE_DIR$/vendor/pda/pheanstalk" />
           <root url="file://$MODULE_DIR$/vendor/phpdocumentor/reflection-common" />
@@ -160,6 +165,7 @@
           <root url="file://$MODULE_DIR$/vendor/symfony/finder" />
           <root url="file://$MODULE_DIR$/vendor/symfony/polyfill-mbstring" />
           <root url="file://$MODULE_DIR$/vendor/symfony/yaml" />
+          <root url="file://$MODULE_DIR$/vendor/udokmeci/yii2-beanstalk" />
           <root url="file://$MODULE_DIR$/vendor/webmozart/assert" />
           <root url="file://$MODULE_DIR$/vendor/yiisoft/yii2" />
           <root url="file://$MODULE_DIR$/vendor/yiisoft/yii2-bootstrap" />
@@ -189,6 +195,7 @@
           <root url="file://$MODULE_DIR$/vendor/codeception/base" />
           <root url="file://$MODULE_DIR$/vendor/codeception/verify" />
           <root url="file://$MODULE_DIR$/vendor/composer" />
+          <root url="file://$MODULE_DIR$/vendor/crazyfd/yii2-qiniu" />
           <root url="file://$MODULE_DIR$/vendor/dmstr/yii2-adminlte-asset" />
           <root url="file://$MODULE_DIR$/vendor/doctrine/instantiator" />
           <root url="file://$MODULE_DIR$/vendor/ezyang/htmlpurifier" />
@@ -199,6 +206,7 @@
           <root url="file://$MODULE_DIR$/vendor/kartik-v/yii2-krajee-base" />
           <root url="file://$MODULE_DIR$/vendor/kartik-v/yii2-widget-datepicker" />
           <root url="file://$MODULE_DIR$/vendor/kartik-v/yii2-widget-fileinput" />
+          <root url="file://$MODULE_DIR$/vendor/mdmsoft/yii2-admin" />
           <root url="file://$MODULE_DIR$/vendor/myclabs/deep-copy" />
           <root url="file://$MODULE_DIR$/vendor/pda/pheanstalk" />
           <root url="file://$MODULE_DIR$/vendor/phpdocumentor/reflection-common" />
@@ -237,6 +245,7 @@
           <root url="file://$MODULE_DIR$/vendor/symfony/finder" />
           <root url="file://$MODULE_DIR$/vendor/symfony/polyfill-mbstring" />
           <root url="file://$MODULE_DIR$/vendor/symfony/yaml" />
+          <root url="file://$MODULE_DIR$/vendor/udokmeci/yii2-beanstalk" />
           <root url="file://$MODULE_DIR$/vendor/webmozart/assert" />
           <root url="file://$MODULE_DIR$/vendor/yiisoft/yii2" />
           <root url="file://$MODULE_DIR$/vendor/yiisoft/yii2-bootstrap" />

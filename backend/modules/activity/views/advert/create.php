@@ -5,9 +5,12 @@ use yii\helpers\Html;
 
 /* @var $this yii\web\View */
 /* @var $model common\models\ActivityAdvert */
+/* @var $activityList common\models\ActivityBase */
+/* @var $p1 */
+/* @var $p2 */
 
-$this->title = 'Create Activity Advert';
-$this->params['breadcrumbs'][] = ['label' => 'Activity Adverts', 'url' => ['index']];
+$this->title = '新增广告';
+$this->params['breadcrumbs'][] = ['label' => '广告列表', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="row">
@@ -19,6 +22,9 @@ $this->params['breadcrumbs'][] = $this->title;
             <div class="box-body">
             <?= $this->render('_form', [
                 'model' => $model,
+                'activityList' => $activityList,
+                'p1' => $p1,
+                'p2' => $p2
             ]) ?>
             </div>
         </div>

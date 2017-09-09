@@ -26,6 +26,7 @@
         msgNoFilesSelected: '',
         msgCancelled: 'Отменено',
         msgZoomModalHeading: 'Подробное превью',
+        msgFileRequired: 'You must select a file to upload.',
         msgSizeTooSmall: 'Файл "{name}" (<b>{size} KB</b>) имеет слишком маленький размер и должен быть больше <b>{minSize} KB</b>.',
         msgSizeTooLarge: 'Файл "{name}" (<b>{size} KB</b>) превышает максимальный размер <b>{maxSize} KB</b>.',
         msgFilesTooLess: 'Вы должны выбрать как минимум <b>{n}</b> {files} для загрузки.',
@@ -53,6 +54,7 @@
         msgUploadBegin: 'Инициализация...',
         msgUploadEnd: 'Готово',
         msgUploadEmpty: 'Недопустимые данные для загрузки',
+        msgUploadError: 'Error',
         msgValidationError: 'Ошибка проверки',
         msgLoading: 'Загрузка файла {index} из {files} &hellip;',
         msgProgress: 'Загрузка файла {index} из {files} - {name} - {percent}% завершено.',
@@ -77,6 +79,7 @@
         fileActionSettings: {
             removeTitle: 'Удалить файл',
             uploadTitle: 'Загрузить файл',
+            uploadRetryTitle: 'Retry upload',
             zoomTitle: 'посмотреть детали',
             dragTitle: 'Переместить / Изменить порядок',
             indicatorNewTitle: 'Еще не загружен',

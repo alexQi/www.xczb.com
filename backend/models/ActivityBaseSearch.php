@@ -66,7 +66,6 @@ class ActivityBaseSearch extends ActivityBase
                 'username' => [
                     'asc'   => ['u.username' => SORT_ASC],
                     'desc'  => ['u.username' => SORT_DESC],
-                    'label' => '操作人'
                 ],
             ]
         ]);

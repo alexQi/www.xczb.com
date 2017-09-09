@@ -25,6 +25,7 @@
         msgNoFilesSelected: 'No hay archivos seleccionados',
         msgCancelled: 'Cancelado',
         msgZoomModalHeading: 'Vista previa detallada',
+        msgFileRequired: 'You must select a file to upload.',
         msgSizeTooSmall: 'El archivo "{name}" (<b>{size} KB</b>) es demasiado pequeño y debe ser mayor de <b>{minSize} KB</b>.',
         msgSizeTooLarge: 'El archivo "{name}" (<b>{size} KB</b>) excede el tamaño máximo permitido de <b>{maxSize} KB</b>.',
         msgFilesTooLess: 'Debe seleccionar al menos <b>{n}</b> {files} a cargar.',
@@ -52,6 +53,7 @@
         msgUploadBegin: 'Inicializando...',
         msgUploadEnd: 'Hecho',
         msgUploadEmpty: 'No existen datos válidos para el envío.',
+        msgUploadError: 'Error',
         msgValidationError: 'Error de validación',
         msgLoading: 'Subiendo archivo {index} de {files} &hellip;',
         msgProgress: 'Subiendo archivo {index} de {files} - {name} - {percent}% completado.',
@@ -76,6 +78,7 @@
         fileActionSettings: {
             removeTitle: 'Eliminar archivo',
             uploadTitle: 'Subir archivo',
+            uploadRetryTitle: 'Retry upload',
             zoomTitle: 'Ver detalles',
             dragTitle: 'Mover / Reordenar',
             indicatorNewTitle: 'No subido todavía',

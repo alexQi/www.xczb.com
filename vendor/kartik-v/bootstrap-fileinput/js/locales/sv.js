@@ -25,6 +25,7 @@
         msgNoFilesSelected: 'Inga filer valda',
         msgCancelled: 'Avbruten',
         msgZoomModalHeading: 'detaljerad förhandsgranskning',
+        msgFileRequired: 'You must select a file to upload.',
         msgSizeTooSmall: 'Filen "{name}" (<b>{size} KB</b>) är för liten och måste vara större än <b>{minSize} KB</b>.',
         msgSizeTooLarge: 'File "{name}" (<b>{size} KB</b>) överstiger högsta tillåtna uppladdningsstorlek <b>{maxSize} KB</b>.',
         msgFilesTooLess: 'Du måste välja minst <b>{n}</b> {files} för att ladda upp.',
@@ -52,6 +53,7 @@
         msgUploadBegin: 'Påbörjar...',
         msgUploadEnd: 'Färdig',
         msgUploadEmpty: 'Ingen giltig data tillgänglig för uppladdning.',
+        msgUploadError: 'Error',
         msgValidationError: 'Valideringsfel',
         msgLoading: 'Laddar fil {index} av {files} &hellip;',
         msgProgress: 'Laddar fil {index} av {files} - {name} - {percent}% färdig.',
@@ -76,6 +78,7 @@
         fileActionSettings: {
             removeTitle: 'Ta bort fil',
             uploadTitle: 'Ladda upp fil',
+            uploadRetryTitle: 'Retry upload',
             zoomTitle: 'Visa detaljer',
             dragTitle: 'Flytta / Ändra ordning',
             indicatorNewTitle: 'Inte uppladdat ännu',

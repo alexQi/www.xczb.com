@@ -3,15 +3,6 @@
 $vendorDir = dirname(__DIR__);
 
 return array (
-  'yiisoft/yii2-swiftmailer' => 
-  array (
-    'name' => 'yiisoft/yii2-swiftmailer',
-    'version' => '2.0.6.0',
-    'alias' => 
-    array (
-      '@yii/swiftmailer' => $vendorDir . '/yiisoft/yii2-swiftmailer',
-    ),
-  ),
   'yiisoft/yii2-bootstrap' => 
   array (
     'name' => 'yiisoft/yii2-bootstrap',
@@ -66,24 +57,6 @@ return array (
       '@cebe/gravatar' => $vendorDir . '/cebe/yii2-gravatar/cebe/gravatar',
     ),
   ),
-  'dmstr/yii2-adminlte-asset' => 
-  array (
-    'name' => 'dmstr/yii2-adminlte-asset',
-    'version' => '2.4.2.0',
-    'alias' => 
-    array (
-      '@dmstr' => $vendorDir . '/dmstr/yii2-adminlte-asset',
-    ),
-  ),
-  'yiisoft/yii2-debug' => 
-  array (
-    'name' => 'yiisoft/yii2-debug',
-    'version' => '2.0.9.0',
-    'alias' => 
-    array (
-      '@yii/debug' => $vendorDir . '/yiisoft/yii2-debug',
-    ),
-  ),
   'kartik-v/yii2-krajee-base' => 
   array (
     'name' => 'kartik-v/yii2-krajee-base',
@@ -109,6 +82,42 @@ return array (
     'alias' => 
     array (
       '@kartik/file' => $vendorDir . '/kartik-v/yii2-widget-fileinput',
+    ),
+  ),
+  'yiisoft/yii2-swiftmailer' => 
+  array (
+    'name' => 'yiisoft/yii2-swiftmailer',
+    'version' => '2.0.7.0',
+    'alias' => 
+    array (
+      '@yii/swiftmailer' => $vendorDir . '/yiisoft/yii2-swiftmailer',
+    ),
+  ),
+  'dmstr/yii2-adminlte-asset' => 
+  array (
+    'name' => 'dmstr/yii2-adminlte-asset',
+    'version' => '2.4.3.0',
+    'alias' => 
+    array (
+      '@dmstr' => $vendorDir . '/dmstr/yii2-adminlte-asset',
+    ),
+  ),
+  'yiisoft/yii2-debug' => 
+  array (
+    'name' => 'yiisoft/yii2-debug',
+    'version' => '2.0.11.0',
+    'alias' => 
+    array (
+      '@yii/debug' => $vendorDir . '/yiisoft/yii2-debug',
+    ),
+  ),
+  'crazyfd/yii2-qiniu' => 
+  array (
+    'name' => 'crazyfd/yii2-qiniu',
+    'version' => '9999999-dev',
+    'alias' => 
+    array (
+      '@crazyfd/qiniu' => $vendorDir . '/crazyfd/yii2-qiniu',
     ),
   ),
 );

@@ -855,8 +855,6 @@ class ActiveField extends Component
      */
     protected function addAriaAttributes(&$options)
     {
-//        var_dump($this->model->isAttributeRequired($this->attribute));
-//        var_dump($this->model);die();
         if ($this->addAriaAttributes) {
             if (!isset($options['aria-required']) && $this->model->isAttributeRequired($this->attribute)) {
                 $options['aria-required'] =  'true';

@@ -21,7 +21,7 @@ class ActivityAdvertSearch extends ActivityAdvert
     {
         return [
             [['id', 'type', 'activity_id', 'target', 'user_id', 'status', 'created_at', 'updated_at'], 'integer'],
-            [['advert_title', 'file_url', 'link_url'], 'safe'],
+            [['advert_title', 'file_url', 'link_url','title'], 'safe'],
         ];
     }
 
@@ -54,6 +54,21 @@ class ActivityAdvertSearch extends ActivityAdvert
             'query' => $query,
         ]);
 
+        $dataProvider->setSort([
+            'attributes' => [
+                'id',
+                'advert_title',
+                'type',
+                'link_url',
+                'status',
+                'updated_at',
+                'title' => [
+                    'asc'   => ['ab.title' => SORT_ASC],
+                    'desc'  => ['ab.title' => SORT_DESC],
+                ],
+            ]
+        ]);
+
         $this->load($params);
 
         if (!$this->validate()) {
@@ -67,14 +82,12 @@ class ActivityAdvertSearch extends ActivityAdvert
             'aa.id' => $this->id,
             'aa.type' => $this->type,
             'ab.title' => $this->title,
-            'aa.target' => $this->target,
-            'aa.user_id' => $this->user_id,
             'aa.status' => $this->status,
             'aa.updated_at' => $this->updated_at,
         ]);
 
         $query->andFilterWhere(['like', 'advert_title', $this->advert_title])
-            ->andFilterWhere(['like', 'file_url', $this->file_url])
+            ->andFilterWhere(['like', 'ab.title', $this->title])
             ->andFilterWhere(['like', 'link_url', $this->link_url]);
 
         return $dataProvider;

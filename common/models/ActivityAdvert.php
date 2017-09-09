@@ -21,6 +21,7 @@ use Yii;
  */
 class ActivityAdvert extends \yii\db\ActiveRecord
 {
+    public $tempFileUrl;
     /**
      * @inheritdoc
      */
@@ -38,7 +39,7 @@ class ActivityAdvert extends \yii\db\ActiveRecord
             [['advert_title', 'file_url', 'activity_id', 'user_id', 'created_at', 'updated_at'], 'required'],
             [['type', 'activity_id', 'target', 'user_id', 'status', 'created_at', 'updated_at'], 'integer'],
             [['advert_title'], 'string', 'max' => 100],
-            [['file_url', 'link_url'], 'string', 'max' => 255],
+            [['file_url', 'link_url','tempFileUrl'], 'string', 'max' => 255],
         ];
     }
 
@@ -54,7 +55,7 @@ class ActivityAdvert extends \yii\db\ActiveRecord
             'file_url' => '素材地址',
             'activity_id' => '关联的活动id',
             'link_url' => '链接地址',
-            'target' => '打开方式',
+            'target' => '打开方式',//1 本页面 2新开窗口
             'user_id' => '操作人',
             'status' => '状态 1停用 2启用',
             'created_at' => '创建时间',

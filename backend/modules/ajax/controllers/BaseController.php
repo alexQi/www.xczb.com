@@ -5,7 +5,6 @@ namespace backend\modules\ajax\controllers;
 use yii;
 use yii\web\Controller;
 use yii\web\Response;
-use yii\web\HttpException;
 
 /**
  * 公共控制器

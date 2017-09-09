@@ -6,6 +6,7 @@
  */
 
 namespace yii\web;
+
 /**
  * This asset bundle provides the base JavaScript files for the Yii Framework.
  *
@@ -17,9 +18,6 @@ class YiiAsset extends AssetBundle
     public $sourcePath = '@yii/assets';
     public $js = [
         'yii.js',
-    ];
-    public $jsOptions = [
-        'position' => View::POS_HEAD,
     ];
     public $depends = [
         'yii\web\JqueryAsset',

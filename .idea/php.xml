@@ -3,14 +3,10 @@
   <component name="PhpIncludePathManager">
     <include_path>
       <path value="$PROJECT_DIR$/vendor/phpspec/prophecy" />
-      <path value="$PROJECT_DIR$/vendor/kartik-v/bootstrap-fileinput" />
       <path value="$PROJECT_DIR$/vendor/fortawesome/font-awesome" />
       <path value="$PROJECT_DIR$/vendor/bower/typeahead.js" />
-      <path value="$PROJECT_DIR$/vendor/kartik-v/yii2-krajee-base" />
       <path value="$PROJECT_DIR$/vendor/bower/punycode" />
-      <path value="$PROJECT_DIR$/vendor/kartik-v/yii2-widget-fileinput" />
       <path value="$PROJECT_DIR$/vendor/bower/yii2-pjax" />
-      <path value="$PROJECT_DIR$/vendor/kartik-v/yii2-widget-datepicker" />
       <path value="$PROJECT_DIR$/vendor/bower/jquery.inputmask" />
       <path value="$PROJECT_DIR$/vendor/bower/bootstrap" />
       <path value="$PROJECT_DIR$/vendor/bower/jquery" />
@@ -77,6 +73,13 @@
       <path value="$PROJECT_DIR$/vendor/phpunit/phpunit" />
       <path value="$PROJECT_DIR$/vendor/guzzlehttp/psr7" />
       <path value="$PROJECT_DIR$/vendor/phpspec/php-diff" />
+      <path value="$PROJECT_DIR$/vendor/udokmeci/yii2-beanstalk" />
+      <path value="$PROJECT_DIR$/vendor/mdmsoft/yii2-admin" />
+      <path value="$PROJECT_DIR$/vendor/kartik-v/bootstrap-fileinput" />
+      <path value="$PROJECT_DIR$/vendor/crazyfd/yii2-qiniu" />
+      <path value="$PROJECT_DIR$/vendor/kartik-v/yii2-krajee-base" />
+      <path value="$PROJECT_DIR$/vendor/kartik-v/yii2-widget-datepicker" />
+      <path value="$PROJECT_DIR$/vendor/kartik-v/yii2-widget-fileinput" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="5.4.0" />

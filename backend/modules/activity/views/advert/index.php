@@ -28,8 +28,24 @@ $this->params['breadcrumbs'][] = $this->title;
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
 
-            'id',
-            'advert_title',
+            [
+                'label' => 'ID',
+                'attribute'=>'id',
+                "headerOptions" => [
+                    "width" => "50"
+                ],
+            ],
+            [
+                'label' => '广告名称',
+                'attribute'=>'advert_title',
+                'format' => 'html',
+                'value'=>function ($model) {
+                    return Html::a($model->title,$model->link_url);
+                },
+                "headerOptions" => [
+                    "width" => "150"
+                ],
+            ],
             [
                 'label' => '类型',
                 'attribute'=>'type',
@@ -45,7 +61,6 @@ $this->params['breadcrumbs'][] = $this->title;
                     "width" => "80"
                 ],
             ],
-            'file_url:url',
             [
                 'label' => '所属活动',
                 'attribute'=>'title',
@@ -54,7 +69,7 @@ $this->params['breadcrumbs'][] = $this->title;
                     return Html::a($model->title,['default/view','id'=>$model->id]);
                 },
                 "headerOptions" => [
-                    "width" => "80"
+                    "width" => "150"
                 ],
             ],
             [
@@ -78,7 +93,16 @@ $this->params['breadcrumbs'][] = $this->title;
                 'format' => ['date','Y-m-d H:i'],
             ],
 
-            ['class' => 'yii\grid\ActionColumn'],
+            [
+                'class' => 'yii\grid\ActionColumn',
+                'template' => '{view} {update} {delete}',
+                'buttonOptions' => [
+                    'class' => 'btn btn-sm bg-olive margin-r-5'
+                ],
+                "headerOptions" => [
+                    "width" => "100"
+                ],
+            ],
         ],
     ]); ?>
             </div>
