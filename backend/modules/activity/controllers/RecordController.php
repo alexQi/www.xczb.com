@@ -54,10 +54,11 @@ class RecordController extends Controller
     {
         $model = $this->findModel($id);
 
-        if ($model->status==1){
-            $model->status = 2;
+        if (yii::$app->request->get('status')){
+            $model->status = yii::$app->request->get('status');
+            $message = $model->status==2 ? '审核完成':'拒绝该用户成功';
             if ($model->save()){
-                \Yii::$app->getSession()->setFlash('success', "头像设置成功！");
+                \Yii::$app->getSession()->setFlash('success', $message);
             }
         }
         return $this->redirect(['index']);

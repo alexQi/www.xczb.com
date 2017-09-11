@@ -76,7 +76,7 @@ Alert::widget();
                 'format' => 'html',
                 'content'=>function ($model) {
                     $html ="<textarea class='form-control' style='height: 100px;resize:none;' disabled>$model->self_desc</textarea>";
-                    $html .='<audio src="http://yinyueshiting.baidu.com/data2/music/57a8cbc4b8e45f7e66ececd916730db3/257539247/257535276216000128.mp3?xcode=2f35db8e521b1ef3c85f964b2abbb8a2" controls style="margin-top:20px;"></audio>';
+                    $html .='<audio src="'.$model->self_media.'" controls style="margin-top:30px;min-width: 530px;"></audio>';
                     return $html;
                 },
                 "headerOptions" => [
@@ -91,11 +91,12 @@ Alert::widget();
                     'audit' => function ($url, $model, $key) {
                         if($model->status==1)
                         {
-                            $html = Html::a('<span class="glyphicon glyphicon-question-sign"></span>', ['record/audit','id'=>$model->id], ['title' => '审核','class'=>'btn btn-sm bg-olive margin-r-5']);
+                            $html = Html::a('<span class="glyphicon glyphicon glyphicon-ok"></span>', ['record/audit','id'=>$model->id,'status'=>2], ['title' => '审核','class'=>'btn btn-sm bg-green margin-r-5']);
+                            $html .= Html::a('<span class="glyphicon glyphicon glyphicon-remove"></span>', ['record/audit','id'=>$model->id,'status'=>3], ['title' => '拒绝','class'=>'btn btn-sm bg-red margin-r-5']);
                         }elseif($model->status==2){
-                            $html = Html::a('<span class="glyphicon glyphicon-ok-sign"></span>', ['record/audit','id'=>$model->id], ['title' => '已审核','class'=>'btn btn-sm bg-olive margin-r-5']);
+                            $html = Html::a('<span class="glyphicon glyphicon-ok-sign"></span>', ['record/audit','id'=>$model->id], ['title' => '已审核','class'=>'btn btn-sm bg-green margin-r-5']);
                         }else{
-                            $html = Html::a('<span class="glyphicon glyphicon-remove-sign"></span>', 'javascript:void(0)', ['title' => '已拒绝','class'=>'btn btn-sm bg-olive margin-r-5']);
+                            $html = Html::a('<span class="glyphicon glyphicon-remove-sign"></span>', 'javascript:void(0)', ['title' => '已拒绝','class'=>'btn btn-sm bg-red margin-r-5']);
                         }
                         return $html;
                     },
