@@ -8,6 +8,7 @@ use yii\helpers\Html;
 /* @var $activityList common\models\ActivityBase */
 /* @var $p1 */
 /* @var $p2 */
+/* @var $id */
 
 $this->title = '新增广告';
 $this->params['breadcrumbs'][] = ['label' => '广告列表', 'url' => ['index']];
@@ -24,7 +25,8 @@ $this->params['breadcrumbs'][] = $this->title;
                 'model' => $model,
                 'activityList' => $activityList,
                 'p1' => $p1,
-                'p2' => $p2
+                'p2' => $p2,
+                'id' => '',
             ]) ?>
             </div>
         </div>

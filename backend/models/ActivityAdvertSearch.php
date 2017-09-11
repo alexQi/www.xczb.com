@@ -20,9 +20,16 @@ class ActivityAdvertSearch extends ActivityAdvert
     public function rules()
     {
         return [
-            [['id', 'type', 'activity_id', 'target', 'user_id', 'status', 'created_at', 'updated_at'], 'integer'],
+            [['id', 'type', 'activity_id', 'target','position', 'user_id', 'status', 'created_at', 'updated_at'], 'integer'],
             [['advert_title', 'file_url', 'link_url','title'], 'safe'],
         ];
+    }
+
+    public function attributeLabels(){
+        $attr = [
+            'title' => '关联活动',
+        ];
+        return array_merge(parent::attributeLabels(),$attr);
     }
 
     /**
@@ -61,6 +68,7 @@ class ActivityAdvertSearch extends ActivityAdvert
                 'type',
                 'link_url',
                 'status',
+                'position',
                 'updated_at',
                 'title' => [
                     'asc'   => ['ab.title' => SORT_ASC],
@@ -83,6 +91,7 @@ class ActivityAdvertSearch extends ActivityAdvert
             'aa.type' => $this->type,
             'ab.title' => $this->title,
             'aa.status' => $this->status,
+            'aa.position' => $this->position,
             'aa.updated_at' => $this->updated_at,
         ]);
 
@@ -91,5 +100,14 @@ class ActivityAdvertSearch extends ActivityAdvert
             ->andFilterWhere(['like', 'link_url', $this->link_url]);
 
         return $dataProvider;
+    }
+
+    public static function getOne($id)
+    {
+        $query = ActivityAdvertSearch::find();
+        $query->select('aa.*,ab.title');
+        $query->from(['aa' => ActivityAdvert::tableName()]);
+        $query->leftJoin(['ab' => ActivityBase::tableName()], 'aa.activity_id=ab.id');
+        return $query->one();
     }
 }

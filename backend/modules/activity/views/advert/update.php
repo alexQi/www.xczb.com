@@ -5,6 +5,10 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 /* @var $model common\models\ActivityAdvert */
 /* @var $activityList common\models\ActivityBase */
+/* @var $p1 */
+/* @var $p2 */
+/* @var $id */
+
 
 $this->title = '修改广告: ' . $model->advert_title;
 $this->params['breadcrumbs'][] = ['label' => '广告列表', 'url' => ['index']];
@@ -20,7 +24,10 @@ $this->params['breadcrumbs'][] = '修改';
             <div class="box-body">
                 <?= $this->render('_form', [
                 'model' => $model,
-                'activityList' => $activityList
+                'activityList' => $activityList,
+                'p1' => $p1,
+                'p2' => $p2,
+                'id' => '',
                 ]) ?>
             </div>
         </div>

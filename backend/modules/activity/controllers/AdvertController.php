@@ -10,6 +10,7 @@ use backend\models\ActivityAdvertSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use yii\helpers\Url;
 /**
  * AdvertController implements the CRUD actions for ActivityAdvert model.
  */
@@ -53,7 +54,7 @@ class AdvertController extends Controller
     public function actionView($id)
     {
         return $this->render('view', [
-            'model' => $this->findModel($id),
+            'model' => ActivityAdvertSearch::getOne($id),
         ]);
     }
 
@@ -71,6 +72,10 @@ class AdvertController extends Controller
         $p1 = $p2 = '';
 
         if ($model->load(Yii::$app->request->post())) {
+            if ($model->file_url=='')
+            {
+                throw new \HttpInvalidParamException('文件未上传');
+            }
             $model->user_id    = yii::$app->user->identity->getId();
             $model->created_at = time();
             $model->updated_at = time();
@@ -98,7 +103,20 @@ class AdvertController extends Controller
         $activityList = ActivityBaseSearch::find()->select('id,title')->all();
         $model = $this->findModel($id);
 
+        $p1[] = $model->file_url.'?'.yii::$app->params['qiniu']['style']['300x200'];
+        $p2[] = [
+            // 要删除商品图的地址
+            'url' => Url::toRoute('/ajax/activity/ajax-delete'),
+            // 商品图对应的商品图id
+            'key' => substr($model->file_url,strlen($model->file_url)- 12,12),
+        ];
+
         if ($model->load(Yii::$app->request->post())) {
+
+            if ($model->file_url=='')
+            {
+                throw new \HttpInvalidParamException('文件未上传');
+            }
             $model->user_id    = yii::$app->user->identity->getId();
             $model->updated_at = time();
             if ($model->save()){
@@ -107,7 +125,11 @@ class AdvertController extends Controller
         } else {
             return $this->render('update', [
                 'model' => $model,
-                'activityList' => $activityList
+                'activityList' => $activityList,
+                'p1' => $p1,
+                'p2' => $p2,
+                // 商品id
+                'id' => $id,
             ]);
         }
     }

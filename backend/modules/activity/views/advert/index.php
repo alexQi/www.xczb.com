@@ -40,7 +40,12 @@ $this->params['breadcrumbs'][] = $this->title;
                 'attribute'=>'advert_title',
                 'format' => 'html',
                 'value'=>function ($model) {
-                    return Html::a($model->title,$model->link_url);
+                    if ($model->link_url){
+                        $html = Html::a($model->advert_title,$model->link_url);
+                    }else{
+                        $html = Html::a($model->advert_title,"javascript:void(0)");
+                    }
+                    return $html;
                 },
                 "headerOptions" => [
                     "width" => "150"
@@ -66,7 +71,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 'attribute'=>'title',
                 'format' => 'html',
                 'value'=>function ($model) {
-                    return Html::a($model->title,['default/view','id'=>$model->id]);
+                    return Html::a($model->title,['default/view','id'=>$model->activity_id]);
                 },
                 "headerOptions" => [
                     "width" => "150"
@@ -83,6 +88,21 @@ $this->params['breadcrumbs'][] = $this->title;
                     return $html;
                 },
                 'filter' => ['1'=>'禁用','2'=>'启用'], //筛选的数据
+                "headerOptions" => [
+                    "width" => "80"
+                ],
+            ],
+            [
+                'label' => '位置',
+                'attribute'=>'position',
+                'format' => 'html',
+                'value'=>function ($model) {
+                    $string = $model->position==1 ? '顶部' : '底部';
+                    $class  = $model->position==1 ? 'info' : 'warning';
+                    $html   ='<span class="label label-'.$class.'">'.$string.'</span>';
+                    return $html;
+                },
+                'filter' => ['1'=>'顶部','2'=>'底部'], //筛选的数据
                 "headerOptions" => [
                     "width" => "80"
                 ],

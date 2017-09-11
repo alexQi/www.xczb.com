@@ -8,9 +8,12 @@ return [
     'uploadPath'=>'../../upload/',
 
     'qiniu' =>  [
-        'uploadUrl' => 'http://ovw3449de.bkt.clouddn.com',
+        'uploadUrl' => 'ztwliot.com',
         'AccessKey' => 'LiJibjRU035QFfsgqAR6nLbMCJx7xX3S1ffRvh5T',
         'SecretKey' => 'gXiK83RjjTluvOCjz4gG8fcojZUPMWXB63BzVwmF',
+        'style' => [
+            '300x200' => 'imageView2/1/w/300/h/200/q/70|imageslim',
+        ]
     ],
     'aliyun' => [
         'AppKey'    => '24518974',

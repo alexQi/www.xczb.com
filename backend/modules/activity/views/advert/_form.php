@@ -10,6 +10,8 @@ use kartik\file\FileInput;
 /* @var $activityList common\models\ActivityBase */
 /* @var $p1 */
 /* @var $p2 */
+/* @var $id */
+
 ?>
 
 <div class="activity-advert-form col-xs-12">
@@ -41,13 +43,15 @@ use kartik\file\FileInput;
                 'initialPreview' => $p1,
                 // 需要展示的图片设置，比如图片的宽度等
                 'initialPreviewConfig' => $p2,
+                //上传格式限制
+                'allowedFileExtensions' => ['mp4','jpg','jpeg','png','gif'],//接收的文件后缀
                 // 是否展示预览图
                 'initialPreviewAsData' => true,
                 // 异步上传的接口地址设置
-                'uploadUrl' => yii\helpers\Url::toRoute(['/ajax/activity/ajax-upload']),
+                'uploadUrl' => yii\helpers\Url::toRoute(['/ajax/activity/ajax-upload','bucket'=>'advert']),
                 // 异步上传需要携带的其他参数，比如id等
                 'uploadExtraData' => [
-                    'id' => '',
+                    'id' => $id,
                 ],
                 'uploadAsync' => true,
                 // 最少上传的文件个数限制
@@ -77,7 +81,7 @@ use kartik\file\FileInput;
                 // 上传成功后的回调方法，需要的可查看data后再做具体操作，一般不需要设置
                 "fileuploaded" => "function (event, data, id, index) {
                 if(data.response.state==1){
-                    $(\"#activityadvert-file_url\").val(data.response.data.key);
+                    $(\"#activityadvert-file_url\").val(data.response.data.file_url);
                 }else{
                     showAlert(data.response.message);
                 }
@@ -94,27 +98,21 @@ use kartik\file\FileInput;
     </div>
 
     <div class="row margin">
-    <?= $form->field($model, 'target',['labelOptions' => ['label' => '链接打开方式'],'template'=>'{label}<div class="col-xs-2">{input}</div><div class="col-xs-2">{error}</div>'])->radioList(['1'=>'本页面','2'=>'新页面']) ?>
+    <?= $form->field($model, 'target',['labelOptions' => ['label' => '链接打开方式'],'template'=>'{label}<div class="col-xs-2">{input}</div><div class="col-xs-2">{error}</div>'])->radioList(['1'=>'本页面','2'=>'新页面'],['prompt'=>'请选择']) ?>
     </div>
     <div class="row margin">
-        <?= $form->field($model, 'status',['labelOptions' => ['label' => '状态'],'template'=>'{label}<div class="col-xs-2">{input}</div><div class="col-xs-2">{error}</div>'])->dropDownList(['1'=>'禁用','2'=>'启用']) ?>
+        <?= $form->field($model, 'status',['labelOptions' => ['label' => '状态'],'template'=>'{label}<div class="col-xs-2">{input}</div><div class="col-xs-2">{error}</div>'])->dropDownList(['1'=>'禁用','2'=>'启用'],['prompt'=>'请选择']) ?>
+    </div>
+
+    <div class="row margin">
+        <?= $form->field($model, 'position',['labelOptions' => ['label' => '位置'],'template'=>'{label}<div class="col-xs-2">{input}</div><div class="col-xs-2">{error}</div>'])->dropDownList(['1'=>'顶部','2'=>'底部'],['prompt'=>'请选择']) ?>
     </div>
 
     <div class="form-group">
-        <input type='hidden' id='activityadvert-file_url' name='ActivityAdvert[file_url]' value="">
-        <?= Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success save-data' : 'btn btn-primary save-data']) ?>
+        <?= $form->field($model, 'file_url')->hiddenInput(['maxlength' => true])->label(false) ?>
+        <?= Html::submitButton($model->isNewRecord ? '新建' : '更新', ['class' => $model->isNewRecord ? 'btn btn-success save-data' : 'btn btn-primary save-data']) ?>
     </div>
 
     <?php ActiveForm::end(); ?>
 
 </div>
-<script>
-    $(function () {
-        $('.save-data').click(function () {
-            if ($('#activityadvert-file_url').val()=='')
-            {
-                return false;
-            }
-        });
-    })
-</script>

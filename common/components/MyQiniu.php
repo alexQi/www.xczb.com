@@ -7,11 +7,25 @@
  */
 namespace common\components;
 
+use yii;
 use crazyfd\qiniu\Qiniu;
 use yii\web\HttpException;
 
 class MyQiniu extends Qiniu
 {
+    /**
+     * MyQiniu constructor.
+     * @param $domain
+     * @param string $bucket
+     */
+    public function __construct($bucket = '')
+    {
+        $domain    = 'http://'.$bucket.'.'.yii::$app->params['qiniu']['uploadUrl'];
+        $accessKey = yii::$app->params['qiniu']['AccessKey'];
+        $secretKey = yii::$app->params['qiniu']['SecretKey'];
+        parent::__construct($accessKey, $secretKey, $domain, $bucket);
+    }
+
     /**
      * 通过本地文件上传
      * @param $filePath
