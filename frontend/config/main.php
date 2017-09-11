@@ -12,14 +12,10 @@ return [
     'bootstrap' => ['log'],
     'controllerNamespace' => 'frontend\controllers',
     'language'=>'zh-CN',
+    'homeUrl' => '/site/default/index',
     'components' => [
         'request' => [
             'csrfParam' => '_csrf-frontend',
-        ],
-        'user' => [
-            'identityClass' => 'common\models\User',
-            'enableAutoLogin' => true,
-            'identityCookie' => ['name' => '_identity-frontend', 'httpOnly' => true],
         ],
         'session' => [
             // this is the name of the session cookie used for login on the frontend
@@ -34,9 +30,9 @@ return [
                 ],
             ],
         ],
-        'errorHandler' => [
-            'errorAction' => '/site/site/error',
-        ],
+//        'errorHandler' => [
+//            'errorAction' => '/site/site/error',
+//        ],
         "urlManager" => [
             //用于表明urlManager是否启用URL美化功能，在Yii1.1中称为path格式URL，
             // Yii2.0中改称美化。

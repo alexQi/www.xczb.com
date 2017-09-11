@@ -97,12 +97,12 @@ $this->params['breadcrumbs'][] = $this->title;
                 'attribute'=>'position',
                 'format' => 'html',
                 'value'=>function ($model) {
-                    $string = $model->position==1 ? '顶部' : '底部';
+                    $string = $model->position==1 ? '首页' : '介绍页';
                     $class  = $model->position==1 ? 'info' : 'warning';
                     $html   ='<span class="label label-'.$class.'">'.$string.'</span>';
                     return $html;
                 },
-                'filter' => ['1'=>'顶部','2'=>'底部'], //筛选的数据
+                'filter' => ['1'=>'首页','2'=>'介绍页'], //筛选的数据
                 "headerOptions" => [
                     "width" => "80"
                 ],

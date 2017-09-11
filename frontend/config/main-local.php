@@ -11,9 +11,6 @@ $config = [
         'site' => [
             'class' => 'frontend\modules\site\Module',
         ],
-        'tool' => [
-            'class' => 'frontend\modules\tool\Module',
-        ],
         'ajax' => [
             'class' => 'frontend\modules\ajax\Module',
         ],

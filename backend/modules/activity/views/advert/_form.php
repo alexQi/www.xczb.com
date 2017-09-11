@@ -105,7 +105,7 @@ use kartik\file\FileInput;
     </div>
 
     <div class="row margin">
-        <?= $form->field($model, 'position',['labelOptions' => ['label' => '位置'],'template'=>'{label}<div class="col-xs-2">{input}</div><div class="col-xs-2">{error}</div>'])->dropDownList(['1'=>'顶部','2'=>'底部'],['prompt'=>'请选择']) ?>
+        <?= $form->field($model, 'position',['labelOptions' => ['label' => '位置'],'template'=>'{label}<div class="col-xs-2">{input}</div><div class="col-xs-2">{error}</div>'])->dropDownList(['1'=>'首页','2'=>'介绍页'],['prompt'=>'请选择']) ?>
     </div>
 
     <div class="form-group">
