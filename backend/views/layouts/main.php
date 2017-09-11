@@ -66,14 +66,14 @@ if (Yii::$app->controller->action->id === 'login') {
     <?php Modal::end();?>
 
     <script>
-//        $(document).on("click",".message-chat",function() {
-//            $.get($(this).attr("href"),
-//                function (data) {
-//                    $('#messageChat-modal').find('.modal-body').html(data);
-//                    $('#messageChat-modal').modal();
-//                }
-//            );
-//        });
+        //        $(document).on("click",".message-chat",function() {
+        //            $.get($(this).attr("href"),
+        //                function (data) {
+        //                    $('#messageChat-modal').find('.modal-body').html(data);
+        //                    $('#messageChat-modal').modal();
+        //                }
+        //            );
+        //        });
 
         var socket;
         var log = function(msg) {

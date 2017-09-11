@@ -2,6 +2,7 @@
 
 namespace backend\models;
 
+use common\models\ActivityBase;
 use Yii;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
@@ -12,6 +13,7 @@ use common\models\ApplyRecord;
  */
 class ApplyRecordSearch extends ApplyRecord
 {
+    public $title;
     /**
      * @inheritdoc
      */
@@ -41,7 +43,10 @@ class ApplyRecordSearch extends ApplyRecord
      */
     public function search($params)
     {
-        $query = ApplyRecord::find();
+        $query = ApplyRecordSearch::find();
+        $query->select('ar.*,ab.title');
+        $query->from(['ar'=>ApplyRecord::tableName()]);
+        $query->leftJoin(['ab'=>ActivityBase::tableName()],'ab.id=ar.activity_id');
 
         // add conditions that should always apply here
 
@@ -63,6 +68,7 @@ class ApplyRecordSearch extends ApplyRecord
             'gender' => $this->gender,
             'phone' => $this->phone,
             'status' => $this->status,
+            'title' => $this->title,
             'created_at' => $this->created_at,
             'updated_at' => $this->updated_at,
         ]);

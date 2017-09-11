@@ -52,6 +52,7 @@ Alert::widget();
                     $html .= "<dd><i class=\"fa fa-fw  fa-odnoklassniki-square\"></i>：".($model->gender==1?'男':'女')."</dd>";
                     $html .= "<dd><i class=\"fa fa-fw fa-phone-square\"></i>：".$model->phone."</dd>";
                     $html .= "<dd><i class=\"fa fa-fw fa-share-square\"></i>：".$model->recommend."</dd>";
+                    $html .= "<dd><i class=\"fa fa-fw fa-xing-square\"></i>：".$model->title."</dd>";
                     if($model->status==1)
                     {
                         $status = '<span class="label label-warning">未审核</span>';
@@ -75,21 +76,13 @@ Alert::widget();
                 'format' => 'html',
                 'content'=>function ($model) {
                     $html ="<textarea class='form-control' style='height: 100px;resize:none;' disabled>$model->self_desc</textarea>";
-                    $html .='<audio src="http://yinyueshiting.baidu.com/data2/music/57a8cbc4b8e45f7e66ececd916730db3/257539247/257535276216000128.mp3?xcode=2f35db8e521b1ef3c85f964b2abbb8a2" controls style="margin: 0;"></audio>';
+                    $html .='<audio src="http://yinyueshiting.baidu.com/data2/music/57a8cbc4b8e45f7e66ececd916730db3/257539247/257535276216000128.mp3?xcode=2f35db8e521b1ef3c85f964b2abbb8a2" controls style="margin-top:20px;"></audio>';
                     return $html;
                 },
                 "headerOptions" => [
                     "width" => "530",
                 ],
             ],
-
-            // 'self_picture',
-            // 'self_media',
-            // 'recommend',
-            // 'status',
-            // 'created_at',
-            // 'updated_at',
-
             [
                 'class' => 'yii\grid\ActionColumn',
                 'header' => '审核',
