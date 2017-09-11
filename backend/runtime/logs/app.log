@@ -431,3 +431,83 @@ Stack trace:
 #34 {main}
 Additional Information:
 
+2017-09-11 14:21:16 [172.17.0.1][3][4199arl23hfnu134tg16pq2nf8][error][yii\db\IntegrityException] PDOException: SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'id' in where clause is ambiguous in /opt/htdocs/www.xczb.com/vendor/yiisoft/yii2/db/Command.php:915
+Stack trace:
+#0 /opt/htdocs/www.xczb.com/vendor/yiisoft/yii2/db/Command.php(915): PDOStatement->execute()
+#1 /opt/htdocs/www.xczb.com/vendor/yiisoft/yii2/db/Command.php(388): yii\db\Command->queryInternal('fetchColumn', 0)
+#2 /opt/htdocs/www.xczb.com/vendor/yiisoft/yii2/db/Query.php(433): yii\db\Command->queryScalar()
+#3 /opt/htdocs/www.xczb.com/vendor/yiisoft/yii2/db/ActiveQuery.php(339): yii\db\Query->queryScalar('COUNT(*)', Object(yii\db\Connection))
+#4 /opt/htdocs/www.xczb.com/vendor/yiisoft/yii2/db/Query.php(319): yii\db\ActiveQuery->queryScalar('COUNT(*)', Object(yii\db\Connection))
+#5 /opt/htdocs/www.xczb.com/vendor/yiisoft/yii2/data/ActiveDataProvider.php(169): yii\db\Query->count('*', NULL)
+#6 /opt/htdocs/www.xczb.com/vendor/yiisoft/yii2/data/BaseDataProvider.php(169): yii\data\ActiveDataProvider->prepareTotalCount()
+#7 /opt/htdocs/www.xczb.com/vendor/yiisoft/yii2/data/ActiveDataProvider.php(106): yii\data\BaseDataProvider->getTotalCount()
+#8 /opt/htdocs/www.xczb.com/vendor/yiisoft/yii2/data/BaseDataProvider.php(101): yii\data\ActiveDataProvider->prepareModels()
+#9 /opt/htdocs/www.xczb.com/vendor/yiisoft/yii2/data/BaseDataProvider.php(114): yii\data\BaseDataProvider->prepare()
+#10 /opt/htdocs/www.xczb.com/vendor/yiisoft/yii2/data/BaseDataProvider.php(155): yii\data\BaseDataProvider->getModels()
+#11 /opt/htdocs/www.xczb.com/vendor/yiisoft/yii2/widgets/BaseListView.php(189): yii\data\BaseDataProvider->getCount()
+#12 /opt/htdocs/www.xczb.com/vendor/yiisoft/yii2/widgets/BaseListView.php(157): yii\widgets\BaseListView->renderSummary()
+#13 /opt/htdocs/www.xczb.com/vendor/yiisoft/yii2/grid/GridView.php(316): yii\widgets\BaseListView->renderSection('{summary}')
+#14 /opt/htdocs/www.xczb.com/vendor/yiisoft/yii2/widgets/BaseListView.php(134): yii\grid\GridView->renderSection('{summary}')
+#15 [internal function]: yii\widgets\BaseListView->yii\widgets\{closure}(Array)
+#16 /opt/htdocs/www.xczb.com/vendor/yiisoft/yii2/widgets/BaseListView.php(137): preg_replace_callback('/{\\w+}/', Object(Closure), '{summary}\n{item...')
+#17 /opt/htdocs/www.xczb.com/vendor/yiisoft/yii2/grid/GridView.php(291): yii\widgets\BaseListView->run()
+#18 /opt/htdocs/www.xczb.com/vendor/yiisoft/yii2/base/Widget.php(139): yii\grid\GridView->run()
+#19 /opt/htdocs/www.xczb.com/backend/modules/activity/views/record/index.php(25): yii\base\Widget::widget(Array)
+#20 /opt/htdocs/www.xczb.com/vendor/yiisoft/yii2/base/View.php(330): require('/opt/htdocs/www...')
+#21 /opt/htdocs/www.xczb.com/vendor/yiisoft/yii2/base/View.php(250): yii\base\View->renderPhpFile('/opt/htdocs/www...', '[<span class="s...')
+#22 /opt/htdocs/www.xczb.com/vendor/yiisoft/yii2/base/View.php(152): yii\base\View->renderFile('/opt/htdocs/www...', Array, Object(backend\modules\activity\controllers\RecordController))
+#23 /opt/htdocs/www.xczb.com/vendor/yiisoft/yii2/base/Controller.php(381): yii\base\View->render('index', Array, Object(backend\modules\activity\controllers\RecordController))
+#24 /opt/htdocs/www.xczb.com/backend/modules/activity/controllers/RecordController.php(43): yii\base\Controller->render('index', Array)
+#25 [internal function]: backend\modules\activity\controllers\RecordController->actionIndex()
+#26 /opt/htdocs/www.xczb.com/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#27 /opt/htdocs/www.xczb.com/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#28 /opt/htdocs/www.xczb.com/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('index', Array)
+#29 /opt/htdocs/www.xczb.com/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('activity/record...', Array)
+#30 /opt/htdocs/www.xczb.com/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#31 /opt/htdocs/www.xczb.com/backend/web/index.php(22): yii\base\Application->run()
+#32 {main}
+
+Next yii\db\IntegrityException: SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'id' in where clause is ambiguous
+The SQL being executed was: SELECT COUNT(*) FROM `pre_apply_record` `ar` LEFT JOIN `pre_activity_base` `ab` ON ab.id=ar.activity_id WHERE `id`='1' in /opt/htdocs/www.xczb.com/vendor/yiisoft/yii2/db/Schema.php:636
+Stack trace:
+#0 /opt/htdocs/www.xczb.com/vendor/yiisoft/yii2/db/Command.php(930): yii\db\Schema->convertException(Object(PDOException), 'SELECT COUNT(*)...')
+#1 /opt/htdocs/www.xczb.com/vendor/yiisoft/yii2/db/Command.php(388): yii\db\Command->queryInternal('fetchColumn', 0)
+#2 /opt/htdocs/www.xczb.com/vendor/yiisoft/yii2/db/Query.php(433): yii\db\Command->queryScalar()
+#3 /opt/htdocs/www.xczb.com/vendor/yiisoft/yii2/db/ActiveQuery.php(339): yii\db\Query->queryScalar('COUNT(*)', Object(yii\db\Connection))
+#4 /opt/htdocs/www.xczb.com/vendor/yiisoft/yii2/db/Query.php(319): yii\db\ActiveQuery->queryScalar('COUNT(*)', Object(yii\db\Connection))
+#5 /opt/htdocs/www.xczb.com/vendor/yiisoft/yii2/data/ActiveDataProvider.php(169): yii\db\Query->count('*', NULL)
+#6 /opt/htdocs/www.xczb.com/vendor/yiisoft/yii2/data/BaseDataProvider.php(169): yii\data\ActiveDataProvider->prepareTotalCount()
+#7 /opt/htdocs/www.xczb.com/vendor/yiisoft/yii2/data/ActiveDataProvider.php(106): yii\data\BaseDataProvider->getTotalCount()
+#8 /opt/htdocs/www.xczb.com/vendor/yiisoft/yii2/data/BaseDataProvider.php(101): yii\data\ActiveDataProvider->prepareModels()
+#9 /opt/htdocs/www.xczb.com/vendor/yiisoft/yii2/data/BaseDataProvider.php(114): yii\data\BaseDataProvider->prepare()
+#10 /opt/htdocs/www.xczb.com/vendor/yiisoft/yii2/data/BaseDataProvider.php(155): yii\data\BaseDataProvider->getModels()
+#11 /opt/htdocs/www.xczb.com/vendor/yiisoft/yii2/widgets/BaseListView.php(189): yii\data\BaseDataProvider->getCount()
+#12 /opt/htdocs/www.xczb.com/vendor/yiisoft/yii2/widgets/BaseListView.php(157): yii\widgets\BaseListView->renderSummary()
+#13 /opt/htdocs/www.xczb.com/vendor/yiisoft/yii2/grid/GridView.php(316): yii\widgets\BaseListView->renderSection('{summary}')
+#14 /opt/htdocs/www.xczb.com/vendor/yiisoft/yii2/widgets/BaseListView.php(134): yii\grid\GridView->renderSection('{summary}')
+#15 [internal function]: yii\widgets\BaseListView->yii\widgets\{closure}(Array)
+#16 /opt/htdocs/www.xczb.com/vendor/yiisoft/yii2/widgets/BaseListView.php(137): preg_replace_callback('/{\\w+}/', Object(Closure), '{summary}\n{item...')
+#17 /opt/htdocs/www.xczb.com/vendor/yiisoft/yii2/grid/GridView.php(291): yii\widgets\BaseListView->run()
+#18 /opt/htdocs/www.xczb.com/vendor/yiisoft/yii2/base/Widget.php(139): yii\grid\GridView->run()
+#19 /opt/htdocs/www.xczb.com/backend/modules/activity/views/record/index.php(25): yii\base\Widget::widget(Array)
+#20 /opt/htdocs/www.xczb.com/vendor/yiisoft/yii2/base/View.php(330): require('/opt/htdocs/www...')
+#21 /opt/htdocs/www.xczb.com/vendor/yiisoft/yii2/base/View.php(250): yii\base\View->renderPhpFile('/opt/htdocs/www...', '[<span class="s...')
+#22 /opt/htdocs/www.xczb.com/vendor/yiisoft/yii2/base/View.php(152): yii\base\View->renderFile('/opt/htdocs/www...', Array, Object(backend\modules\activity\controllers\RecordController))
+#23 /opt/htdocs/www.xczb.com/vendor/yiisoft/yii2/base/Controller.php(381): yii\base\View->render('index', Array, Object(backend\modules\activity\controllers\RecordController))
+#24 /opt/htdocs/www.xczb.com/backend/modules/activity/controllers/RecordController.php(43): yii\base\Controller->render('index', Array)
+#25 [internal function]: backend\modules\activity\controllers\RecordController->actionIndex()
+#26 /opt/htdocs/www.xczb.com/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#27 /opt/htdocs/www.xczb.com/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#28 /opt/htdocs/www.xczb.com/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('index', Array)
+#29 /opt/htdocs/www.xczb.com/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('activity/record...', Array)
+#30 /opt/htdocs/www.xczb.com/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#31 /opt/htdocs/www.xczb.com/backend/web/index.php(22): yii\base\Application->run()
+#32 {main}
+Additional Information:
+Array
+(
+    [0] => 23000
+    [1] => 1052
+    [2] => Column 'id' in where clause is ambiguous
+)
+

@@ -11,8 +11,8 @@ use yii\widgets\ActiveForm;
 <div class="activity-advert-search">
 
     <?php $form = ActiveForm::begin([
-        'action' => ['index'],
-        'method' => 'get',
+        'action'  => ['index'],
+        'method'  => 'get',
     ]); ?>
 
     <?= $form->field($model, 'id') ?>
@@ -23,7 +23,7 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'file_url') ?>
 
-    <?= $form->field($model, 'activity_id') ?>
+    <?= $form->field($model, 'title') ?>
 
     <?php // echo $form->field($model, 'link_url') ?>
 
@@ -38,10 +38,8 @@ use yii\widgets\ActiveForm;
     <?php // echo $form->field($model, 'updated_at') ?>
 
     <div class="form-group">
-        <?= Html::submitButton('Search', ['class' => 'btn btn-primary']) ?>
-        <?= Html::resetButton('Reset', ['class' => 'btn btn-default']) ?>
+        <?= Html::submitButton('搜索', ['class' => 'btn btn-primary']) ?>
+        <?= Html::resetButton('重置', ['class' => 'btn btn-default']) ?>
     </div>
-
     <?php ActiveForm::end(); ?>
-
 </div>

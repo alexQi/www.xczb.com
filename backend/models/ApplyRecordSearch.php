@@ -3,7 +3,7 @@
 namespace backend\models;
 
 use common\models\ActivityBase;
-use Yii;
+use yii;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
 use common\models\ApplyRecord;
@@ -52,6 +52,7 @@ class ApplyRecordSearch extends ApplyRecord
 
         $dataProvider = new ActiveDataProvider([
             'query' => $query,
+            'pagination' => array('pageSize' => 10),
         ]);
 
         $this->load($params);
@@ -64,13 +65,13 @@ class ApplyRecordSearch extends ApplyRecord
 
         // grid filtering conditions
         $query->andFilterWhere([
-            'id' => $this->id,
-            'gender' => $this->gender,
-            'phone' => $this->phone,
-            'status' => $this->status,
-            'title' => $this->title,
-            'created_at' => $this->created_at,
-            'updated_at' => $this->updated_at,
+            'ar.id' => $this->id,
+            'ar.gender' => $this->gender,
+            'ar.phone' => $this->phone,
+            'ar.status' => $this->status,
+            'ab.title' => $this->title,
+            'ar.created_at' => $this->created_at,
+            'ar.updated_at' => $this->updated_at,
         ]);
 
         $query->andFilterWhere(['like', 'apply_name', $this->apply_name])
