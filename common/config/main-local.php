@@ -1,12 +1,12 @@
 <?php
-
+use Codeception\Module\Redis;
 return [
     'components' => [
         'db' => [
             'class' => 'yii\db\Connection',
-            'dsn'   => 'mysql:host=192.168.10.18;dbname=zcg;port=3306',
+            'dsn'   => 'mysql:host=127.0.0.1;dbname=zcg;port=3306',
             'username' => 'root',
-            'password' => '123456',
+            'password' => 'woshishei',
             'charset'  => 'utf8',
             'tablePrefix' => 'pre_',
         ],
@@ -23,6 +23,12 @@ return [
                 'port' => '465',
                 'encryption' => 'ssl',
             ],
+        ],
+        'redis' => [
+            'class' => 'yii\redis\Connection',
+            'hostname' => 'localhost',
+            'port' => 6379,
+            'database' => 0,
         ],
         'beanstalk'=>[
             'class' => 'common\components\yii2beanstalk\Beanstalk',
