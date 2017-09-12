@@ -1,5 +1,5 @@
 <?php
-use Codeception\Module\Redis;
+
 return [
     'components' => [
         'db' => [

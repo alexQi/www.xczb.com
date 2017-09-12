@@ -2,8 +2,9 @@
 
 namespace frontend\modules\ajax\controllers;
 
+use yii;
 use frontend\models\ApplyUserService;
-use yii\db\Exception;
+use yii\base\Exception;
 
 /**
  * Default controller for the `module` module
@@ -44,6 +45,32 @@ class DefaultController extends BaseController
             {
                 throw new Exception('参数错误');
             }
+            $redis = yii::$app->redis;
+            $VoteNum = $redis->get('vote_user_'.date('Ymd',time()).'_'.$this->getData['vote_user']);
+
+            if ($VoteNum)
+            {
+                if ($VoteNum<3)
+                {
+                    $redis->incr('vote_user_'.date('Ymd',time()).'_'.$this->getData['vote_user']);
+                }else{
+                    throw new Exception('每人每天只能投三票');
+                }
+            }else{
+                $redis->setex('vote_user_'.date('Ymd',time()).'_'.$this->getData['vote_user'],86400,1);
+            }
+
+            $voteApply = $redis->get('vote_apply_'.$this->getData['id']);
+            if (!$voteApply)
+            {
+                $redis->set('vote_apply_'.$this->getData['id'],1);
+            }else{
+                $redis->incr('vote_apply_'.$this->getData['id']);
+            }
+
+            $this->ajaxReturn['state'] = 1;
+            $this->ajaxReturn['message'] = '投票成功,感谢你的参与';
+            $this->ajaxReturn['vote_num']= $redis->get('vote_apply_'.$this->getData['id']);
 
         }catch (Exception $e){
             $this->ajaxReturn['message'] = $e->getMessage();

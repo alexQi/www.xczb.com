@@ -338,7 +338,7 @@ use yii\helpers\Url;
 
             <div class="aui-card-list-content aui-padded-5">
                 <div class="person">
-                    <div class="myvotenum"><%= items[i].votes%></div>
+                    <div class="myvotenum vote-num-<%= items[i].id%>"><%= items[i].votes%></div>
                     <img class="personimg" src="<%= items[i].icon%>" alt="">
                     <span class="wlplayer">
                         <audio id="<%= items[i].id%>"  preload="none">
@@ -438,12 +438,17 @@ use yii\helpers\Url;
 
     $(".voteyes").live("click", function() {
         var id = $(this).attr('data-id');
-        var user = 'wobuzhidao';
+        var user = '11';
         $.get('<?php echo Url::to(['/ajax/default/do-vote'])?>?id='+id+'&vote_user='+user,function(data,status){
+
+            if (data.state==1)
+            {
+                $('.vote-num-'+id).html(data.vote_num);
+            }
             layer.open({
-                content: '投票成功,感谢你的参与'
-                ,skin: 'msg'
-                ,time: 3 //2秒后自动关闭
+                content : data.message,
+                skin    : 'msg',
+                time    : 3 //2秒后自动关闭
             });
         });
 
