@@ -26,4 +26,14 @@ class DefaultController extends BaseController
             'activityInfo' => $activityInfo,
         ]);
     }
+
+    public function actionJoin()
+    {
+        return $this->render('join');
+    }
+
+    public function actionAbout()
+    {
+        return $this->render('about');
+    }
 }
