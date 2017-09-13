@@ -149,7 +149,7 @@
 					</div>
 					<br/>
 					<footer class="my-footer">本次活动最终解释权归宣城宛聆音乐</footer>
-
+                </div>
 			</form>
 
 			<script type="text/javascript" src="/script/jquery.min.js"></script>
