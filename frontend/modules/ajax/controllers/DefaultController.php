@@ -5,6 +5,7 @@ namespace frontend\modules\ajax\controllers;
 use yii;
 use frontend\models\ApplyUserService;
 use yii\base\Exception;
+use common\components\MyQiniu;
 
 /**
  * Default controller for the `module` module
@@ -35,6 +36,39 @@ class DefaultController extends BaseController
         }
 
         $this->ajaxReturn = $dataList;
+        return $this->ajaxReturn;
+    }
+
+    /**
+     * ajax 上传
+     */
+    public function actionAjaxUpload(){
+        try{
+            if (!yii::$app->request->get('bucket'))
+            {
+                throw new Exception('Bucket未定义');
+            }
+            $uploadFile = $_FILES;
+            if (!$uploadFile){
+                throw new Exception('未检测到上传文件');
+            }
+
+            $bucket = yii::$app->request->get('bucket');
+            $qiniu = new MyQiniu($bucket);
+            $key = 'QB'.time();
+            $result  = $qiniu->uploadFileGetReturn($uploadFile->tempName,$key);
+            if (!$result){
+                throw new Exception('上传文件失败');
+            }
+
+            $result['file_url'] = $qiniu->getLink($result['key']);
+
+            $this->ajaxReturn['state']   = 1;
+            $this->ajaxReturn['message'] = '上传成功';
+            $this->ajaxReturn['data']  = $result;
+        }catch(Exception $e){
+            $this->ajaxReturn['message'] = $e->getMessage();
+        }
         return $this->ajaxReturn;
     }
 
