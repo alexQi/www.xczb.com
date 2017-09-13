@@ -2,4 +2,5 @@ frontend/web/assets/
 frontend/runtime/
 backend/web/assets/
 backend/runtime/
-common/config/
+.idea/
+common/config/main-local.php
