@@ -2,12 +2,123 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d876165a-ba0a-4ae6-b6e7-8b0d93aabb48" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/web/layui/font/iconfont.eot" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/web/layui/font/iconfont.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/web/layui/font/iconfont.woff" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/web/layui/images/face/0.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/web/layui/images/face/1.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/web/layui/images/face/10.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/web/layui/images/face/11.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/web/layui/images/face/12.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/web/layui/images/face/13.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/web/layui/images/face/14.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/web/layui/images/face/15.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/web/layui/images/face/16.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/web/layui/images/face/17.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/web/layui/images/face/18.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/web/layui/images/face/19.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/web/layui/images/face/2.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/web/layui/images/face/20.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/web/layui/images/face/21.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/web/layui/images/face/22.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/web/layui/images/face/23.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/web/layui/images/face/24.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/web/layui/images/face/25.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/web/layui/images/face/26.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/web/layui/images/face/27.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/web/layui/images/face/28.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/web/layui/images/face/29.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/web/layui/images/face/3.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/web/layui/images/face/30.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/web/layui/images/face/31.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/web/layui/images/face/32.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/web/layui/images/face/33.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/web/layui/images/face/34.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/web/layui/images/face/35.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/web/layui/images/face/36.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/web/layui/images/face/37.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/web/layui/images/face/38.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/web/layui/images/face/39.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/web/layui/images/face/4.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/web/layui/images/face/40.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/web/layui/images/face/41.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/web/layui/images/face/42.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/web/layui/images/face/43.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/web/layui/images/face/44.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/web/layui/images/face/45.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/web/layui/images/face/46.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/web/layui/images/face/47.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/web/layui/images/face/48.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/web/layui/images/face/49.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/web/layui/images/face/5.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/web/layui/images/face/50.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/web/layui/images/face/51.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/web/layui/images/face/52.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/web/layui/images/face/53.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/web/layui/images/face/54.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/web/layui/images/face/55.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/web/layui/images/face/56.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/web/layui/images/face/57.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/web/layui/images/face/58.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/web/layui/images/face/59.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/web/layui/images/face/6.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/web/layui/images/face/60.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/web/layui/images/face/61.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/web/layui/images/face/62.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/web/layui/images/face/63.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/web/layui/images/face/64.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/web/layui/images/face/65.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/web/layui/images/face/66.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/web/layui/images/face/67.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/web/layui/images/face/68.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/web/layui/images/face/69.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/web/layui/images/face/7.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/web/layui/images/face/70.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/web/layui/images/face/71.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/web/layui/images/face/8.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/web/layui/images/face/9.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.project" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/web/layui/css/layui.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/web/layui/css/layui.mobile.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/web/layui/css/modules/code.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/web/layui/css/modules/laydate/default/laydate.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/web/layui/css/modules/layer/default/layer.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/web/layui/font/iconfont.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/web/layui/lay/modules/carousel.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/web/layui/lay/modules/code.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/web/layui/lay/modules/element.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/web/layui/lay/modules/flow.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/web/layui/lay/modules/form.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/web/layui/lay/modules/jquery.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/web/layui/lay/modules/laydate.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/web/layui/lay/modules/layedit.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/web/layui/lay/modules/layer.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/web/layui/lay/modules/laypage.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/web/layui/lay/modules/laytpl.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/web/layui/lay/modules/mobile.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/web/layui/lay/modules/table.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/web/layui/lay/modules/tree.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/web/layui/lay/modules/upload.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/web/layui/lay/modules/util.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/web/layui/layui.all.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/web/layui/layui.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/zcg.sql" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/runtime/debug/index.data" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/frontend/web/layer/layer.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/frontend/web/layer/mobile/layer.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/frontend/web/layer/mobile/need/layer.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/frontend/web/layer/skin/default/layer.css" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/frontend/web/layer/skin/default/icon-ext.png" afterPath="$PROJECT_DIR$/frontend/web/layui/css/modules/layer/default/icon-ext.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/frontend/web/layer/skin/default/icon.png" afterPath="$PROJECT_DIR$/frontend/web/layui/css/modules/layer/default/icon.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/frontend/web/layer/skin/default/loading-0.gif" afterPath="$PROJECT_DIR$/frontend/web/layui/css/modules/layer/default/loading-0.gif" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/frontend/web/layer/skin/default/loading-1.gif" afterPath="$PROJECT_DIR$/frontend/web/layui/css/modules/layer/default/loading-1.gif" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/frontend/web/layer/skin/default/loading-2.gif" afterPath="$PROJECT_DIR$/frontend/web/layui/css/modules/layer/default/loading-2.gif" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/crazyfd/yii2-qiniu" afterPath="$PROJECT_DIR$/vendor/crazyfd/yii2-qiniu" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/modules/ajax/controllers/ActivityController.php" afterPath="$PROJECT_DIR$/backend/modules/ajax/controllers/ActivityController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/runtime/debug/index.data" afterPath="$PROJECT_DIR$/backend/runtime/debug/index.data" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/runtime/logs/app.log" afterPath="$PROJECT_DIR$/backend/runtime/logs/app.log" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/common/config/main-local.php" afterPath="$PROJECT_DIR$/common/config/main-local.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/modules/ajax/controllers/DefaultController.php" afterPath="$PROJECT_DIR$/frontend/modules/ajax/controllers/DefaultController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/modules/site/views/default/index.php" afterPath="$PROJECT_DIR$/frontend/modules/site/views/default/index.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -21,22 +132,49 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="main.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/frontend/config/main.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="18" column="10" lean-forward="false" selection-start-line="18" selection-start-column="10" selection-end-line="18" selection-end-column="10" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/frontend/modules/site/views/default/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="7480">
-              <caret line="440" column="22" lean-forward="false" selection-start-line="440" selection-start-column="22" selection-end-line="440" selection-end-column="22" />
-              <folding />
+            <state relative-caret-position="7446">
+              <caret line="438" column="22" lean-forward="false" selection-start-line="438" selection-start-column="22" selection-end-line="438" selection-end-column="22" />
+              <folding>
+                <marker date="1505309563000" expanded="true" signature="17613:17619" ph="{...}" />
+                <marker date="1505309563000" expanded="true" signature="17613:22854" ph="..." />
+                <marker date="1505309563000" expanded="true" signature="17686:18773" ph="{...}" />
+                <marker date="1505309563000" expanded="true" signature="17751:18763" ph="{...}" />
+                <marker date="1505309563000" expanded="true" signature="17842:17855" ph="/*...*/" />
+                <marker date="1505309563000" expanded="true" signature="17915:18749" ph="{...}" />
+                <marker date="1505309563000" expanded="true" signature="17975:18211" ph="{...}" />
+                <marker date="1505309563000" expanded="true" signature="18250:18540" ph="{...}" />
+                <marker date="1505309563000" expanded="true" signature="18546:18730" ph="{...}" />
+                <marker date="1505309563000" expanded="true" signature="18837:19299" ph="{...}" />
+                <marker date="1505309563000" expanded="true" signature="18923:19293" ph="{...}" />
+                <marker date="1505309563000" expanded="true" signature="19000:19138" ph="{...}" />
+                <marker date="1505309563000" expanded="true" signature="19144:19283" ph="{...}" />
+                <marker date="1505309563000" expanded="true" signature="19325:19339" ph="/*...*/" />
+                <marker date="1505309563000" expanded="true" signature="19365:19528" ph="{...}" />
+                <marker date="1505309563000" expanded="true" signature="19397:19447" ph="{...}" />
+                <marker date="1505309563000" expanded="true" signature="19534:19546" ph="/*...*/" />
+                <marker date="1505309563000" expanded="true" signature="19585:20039" ph="{...}" />
+                <marker date="1505309563000" expanded="true" signature="19928:20033" ph="{...}" />
+                <marker date="1505309563000" expanded="true" signature="20047:20055" ph="/*...*/" />
+                <marker date="1505309563000" expanded="true" signature="20086:20361" ph="{&quot;pageStyle&quot;: 'dot'...}" />
+                <marker date="1505309563000" expanded="true" signature="20369:20377" ph="/*...*/" />
+                <marker date="1505309563000" expanded="true" signature="20710:21288" ph="{...}" />
+                <marker date="1505309563000" expanded="true" signature="20756:20815" ph="{...}" />
+                <marker date="1505309563000" expanded="true" signature="20860:21282" ph="{...}" />
+                <marker date="1505309563000" expanded="true" signature="20896:21080" ph="{...}" />
+                <marker date="1505309563000" expanded="true" signature="21086:21272" ph="{...}" />
+                <marker date="1505309563000" expanded="true" signature="21332:21508" ph="{...}" />
+                <marker date="1505309563000" expanded="true" signature="21547:22022" ph="{...}" />
+                <marker date="1505309563000" expanded="true" signature="21622:21804" ph="{...}" />
+                <marker date="1505309563000" expanded="true" signature="21810:22016" ph="{...}" />
+                <marker date="1505309563000" expanded="true" signature="22029:22040" ph="/*...*/" />
+                <marker date="1505309563000" expanded="true" signature="22223:22321" ph="//..." />
+                <marker date="1505309563000" expanded="true" signature="22354:22397" ph="{...}" />
+                <marker date="1505309563000" expanded="true" signature="22403:22560" ph="//..." />
+                <marker date="1505309563000" expanded="true" signature="22648:22825" ph="//..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -53,11 +191,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DefaultController.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="DefaultController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/frontend/modules/ajax/controllers/DefaultController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="850">
-              <caret line="50" column="34" lean-forward="false" selection-start-line="50" selection-start-column="34" selection-end-line="50" selection-end-column="34" />
+            <state relative-caret-position="189">
+              <caret line="85" column="13" lean-forward="true" selection-start-line="85" selection-start-column="13" selection-end-line="85" selection-end-column="13" />
               <folding>
                 <element signature="e#53#61#0#PHP" expanded="true" />
               </folding>
@@ -85,7 +223,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ActivityController.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ActivityController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/backend/modules/ajax/controllers/ActivityController.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="205">
@@ -218,10 +356,10 @@
         <option value="$PROJECT_DIR$/frontend/models/ApplyUserService.php" />
         <option value="$PROJECT_DIR$/backend/modules/activity/views/advert/_form.php" />
         <option value="$PROJECT_DIR$/frontend/modules/site/controllers/DefaultController.php" />
-        <option value="$PROJECT_DIR$/common/config/main-local.php" />
         <option value="$PROJECT_DIR$/frontend/modules/site/views/default/index.php" />
-        <option value="$PROJECT_DIR$/frontend/modules/ajax/controllers/DefaultController.php" />
         <option value="$PROJECT_DIR$/backend/modules/ajax/controllers/ActivityController.php" />
+        <option value="$PROJECT_DIR$/common/config/main-local.php" />
+        <option value="$PROJECT_DIR$/frontend/modules/ajax/controllers/DefaultController.php" />
       </list>
     </option>
   </component>
@@ -382,32 +520,6 @@
             <path>
               <item name="www.xczb.com" type="b2602c69:ProjectViewProjectNode" />
               <item name="www.xczb.com" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="backend" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="www.xczb.com" type="b2602c69:ProjectViewProjectNode" />
-              <item name="www.xczb.com" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="backend" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="modules" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="www.xczb.com" type="b2602c69:ProjectViewProjectNode" />
-              <item name="www.xczb.com" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="backend" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="modules" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="ajax" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="www.xczb.com" type="b2602c69:ProjectViewProjectNode" />
-              <item name="www.xczb.com" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="backend" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="modules" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="ajax" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="controllers" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="www.xczb.com" type="b2602c69:ProjectViewProjectNode" />
-              <item name="www.xczb.com" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="frontend" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
@@ -430,12 +542,6 @@
               <item name="modules" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="ajax" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="controllers" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="www.xczb.com" type="b2602c69:ProjectViewProjectNode" />
-              <item name="www.xczb.com" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="frontend" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="web" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
           <select />
@@ -515,12 +621,12 @@
       <workItem from="1505270418700" duration="202000" />
       <workItem from="1505287398188" duration="1082000" />
       <workItem from="1505291308425" duration="656000" />
-      <workItem from="1505307963307" duration="779000" />
+      <workItem from="1505307963307" duration="1356000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="150764000" />
+    <option name="totallyTimeSpent" value="151341000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -610,13 +716,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/backend/models/ActivityAdvertSearch.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1241">
-          <caret line="77" column="11" lean-forward="false" selection-start-line="77" selection-start-column="11" selection-end-line="77" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vendor/crazyfd/yii2-qiniu/Qiniu.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-4179">
@@ -892,19 +991,48 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/common/config/main-local.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="27" column="39" lean-forward="false" selection-start-line="27" selection-start-column="39" selection-end-line="27" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/frontend/modules/site/views/default/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="7480">
-          <caret line="440" column="22" lean-forward="false" selection-start-line="440" selection-start-column="22" selection-end-line="440" selection-end-column="22" />
-          <folding />
+        <state relative-caret-position="7446">
+          <caret line="438" column="22" lean-forward="false" selection-start-line="438" selection-start-column="22" selection-end-line="438" selection-end-column="22" />
+          <folding>
+            <marker date="1505309563000" expanded="true" signature="17613:17619" ph="{...}" />
+            <marker date="1505309563000" expanded="true" signature="17613:22854" ph="..." />
+            <marker date="1505309563000" expanded="true" signature="17686:18773" ph="{...}" />
+            <marker date="1505309563000" expanded="true" signature="17751:18763" ph="{...}" />
+            <marker date="1505309563000" expanded="true" signature="17842:17855" ph="/*...*/" />
+            <marker date="1505309563000" expanded="true" signature="17915:18749" ph="{...}" />
+            <marker date="1505309563000" expanded="true" signature="17975:18211" ph="{...}" />
+            <marker date="1505309563000" expanded="true" signature="18250:18540" ph="{...}" />
+            <marker date="1505309563000" expanded="true" signature="18546:18730" ph="{...}" />
+            <marker date="1505309563000" expanded="true" signature="18837:19299" ph="{...}" />
+            <marker date="1505309563000" expanded="true" signature="18923:19293" ph="{...}" />
+            <marker date="1505309563000" expanded="true" signature="19000:19138" ph="{...}" />
+            <marker date="1505309563000" expanded="true" signature="19144:19283" ph="{...}" />
+            <marker date="1505309563000" expanded="true" signature="19325:19339" ph="/*...*/" />
+            <marker date="1505309563000" expanded="true" signature="19365:19528" ph="{...}" />
+            <marker date="1505309563000" expanded="true" signature="19397:19447" ph="{...}" />
+            <marker date="1505309563000" expanded="true" signature="19534:19546" ph="/*...*/" />
+            <marker date="1505309563000" expanded="true" signature="19585:20039" ph="{...}" />
+            <marker date="1505309563000" expanded="true" signature="19928:20033" ph="{...}" />
+            <marker date="1505309563000" expanded="true" signature="20047:20055" ph="/*...*/" />
+            <marker date="1505309563000" expanded="true" signature="20086:20361" ph="{&quot;pageStyle&quot;: 'dot'...}" />
+            <marker date="1505309563000" expanded="true" signature="20369:20377" ph="/*...*/" />
+            <marker date="1505309563000" expanded="true" signature="20710:21288" ph="{...}" />
+            <marker date="1505309563000" expanded="true" signature="20756:20815" ph="{...}" />
+            <marker date="1505309563000" expanded="true" signature="20860:21282" ph="{...}" />
+            <marker date="1505309563000" expanded="true" signature="20896:21080" ph="{...}" />
+            <marker date="1505309563000" expanded="true" signature="21086:21272" ph="{...}" />
+            <marker date="1505309563000" expanded="true" signature="21332:21508" ph="{...}" />
+            <marker date="1505309563000" expanded="true" signature="21547:22022" ph="{...}" />
+            <marker date="1505309563000" expanded="true" signature="21622:21804" ph="{...}" />
+            <marker date="1505309563000" expanded="true" signature="21810:22016" ph="{...}" />
+            <marker date="1505309563000" expanded="true" signature="22029:22040" ph="/*...*/" />
+            <marker date="1505309563000" expanded="true" signature="22223:22321" ph="//..." />
+            <marker date="1505309563000" expanded="true" signature="22354:22397" ph="{...}" />
+            <marker date="1505309563000" expanded="true" signature="22403:22560" ph="//..." />
+            <marker date="1505309563000" expanded="true" signature="22648:22825" ph="//..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -939,21 +1067,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/modules/ajax/controllers/DefaultController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="850">
-          <caret line="50" column="34" lean-forward="false" selection-start-line="50" selection-start-column="34" selection-end-line="50" selection-end-column="34" />
-          <folding>
-            <element signature="e#53#61#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/backend/modules/ajax/controllers/ActivityController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="205">
           <caret line="27" column="74" lean-forward="false" selection-start-line="27" selection-start-column="74" selection-end-line="27" selection-end-column="74" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/config/main-local.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="27" column="39" lean-forward="false" selection-start-line="27" selection-start-column="39" selection-end-line="27" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/runtime/debug/index.data">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/modules/ajax/controllers/DefaultController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="85" column="13" lean-forward="true" selection-start-line="85" selection-start-column="13" selection-end-line="85" selection-end-column="13" />
+          <folding>
+            <element signature="e#53#61#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
