@@ -70,7 +70,7 @@
 	<body>
 
 		<div class="mylogo">
-			<img src="images/apicloud-bg.png" />
+			<img src="/images/apicloud-bg.png" />
 		</div>
 
 		<div class="my-frm">
