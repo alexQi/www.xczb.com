@@ -9,7 +9,7 @@ use yii\helpers\Url;
     <meta charset="utf-8">
     <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0" />
     <meta name="format-detection" content="telephone=no,email=no,date=no,aItemress=no">
-    <title>宛陵歌王投票</title>
+    <title>宛聆歌王投票</title>
     <link rel="stylesheet" type="text/css" href="../css/aui.css" />
     <link rel="stylesheet" type="text/css" href="../css/loader.css" />
     <link rel="stylesheet" type="text/css" href="../css/aui-slide.css" />
@@ -375,19 +375,17 @@ use yii\helpers\Url;
 <script type="text/javascript" src="script/template-native.js"></script>
 <script type="text/javascript" src="script/water.js"></script>
 <script type="text/javascript" src="script/aui-slide.js"></script>
-<script type="text/javascript" src="layer/mobile/layer.js"></script>
-<!--	<script type="text/javascript" src="script/fastclick.js"></script>-->
-<!--<script type="text/javascript" src="script/aui-collapse.js"></script>-->
+<script type="text/javascript" src="layui/layui.js"></script>
 <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
 
 
 <script>
 
-    //
-    //$(function() {
-    //  FastClick.attach(document.body);
-    //});
-    //
+		/*加載Layer模塊*/
+    	layui.use(['layer'], function(){
+			var layer = layui.layer
+		});	
+    
 
     var Hispalyer = null; //記錄只播放一個播放器.
 
@@ -445,13 +443,20 @@ use yii\helpers\Url;
             {
                 $('.vote-num-'+id).html(data.vote_num);
             }
-            layer.open({
-                content : data.message,
-                skin    : 'msg',
-                time    : 3 //2秒后自动关闭
-            });
-        });
+           // layer.open({
+             //   content : data.message,
+             //   skin    : 'msg',
+             //   time    : 3 //2秒后自动关闭
+           // });
+			
+			layer.msg( data.message,{
+			offset: 'c',
+			anim:1
+			});
+     
 
+    });
+    
     });
 
     $(".items,.seachperson").on("click",".person", function(e) {

@@ -54,7 +54,7 @@ class DefaultController extends BaseController
                 {
                     $redis->incr('vote_user_'.date('Ymd',time()).'_'.$this->getData['vote_user']);
                 }else{
-                    throw new Exception('每人每天只能投三票');
+                    throw new Exception('每人每天只能投3票');
                 }
             }else{
                 $redis->setex('vote_user_'.date('Ymd',time()).'_'.$this->getData['vote_user'],86400,1);
