@@ -81,6 +81,10 @@
       <path value="$PROJECT_DIR$/vendor/kartik-v/yii2-widget-datepicker" />
       <path value="$PROJECT_DIR$/vendor/kartik-v/yii2-widget-fileinput" />
       <path value="$PROJECT_DIR$/vendor/yiisoft/yii2-redis" />
+      <path value="$PROJECT_DIR$/vendor/phar-io/manifest" />
+      <path value="$PROJECT_DIR$/vendor/phar-io/version" />
+      <path value="$PROJECT_DIR$/vendor/theseer/tokenizer" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/object-reflector" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="5.4.0" />
