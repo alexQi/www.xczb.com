@@ -10,9 +10,9 @@ use yii\helpers\Url;
     <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0" />
     <meta name="format-detection" content="telephone=no,email=no,date=no,aItemress=no">
     <title>宛聆歌王投票</title>
-    <link rel="stylesheet" type="text/css" href="../css/aui.css" />
-    <link rel="stylesheet" type="text/css" href="../css/loader.css" />
-    <link rel="stylesheet" type="text/css" href="../css/aui-slide.css" />
+    <link rel="stylesheet" type="text/css" href="/css/aui.css" />
+    <link rel="stylesheet" type="text/css" href="/css/loader.css" />
+    <link rel="stylesheet" type="text/css" href="/css/aui-slide.css" />
 
     <style>
         * {
@@ -54,7 +54,7 @@ use yii\helpers\Url;
 
         .mychart {
 
-            background: url(images/mychart.jpg) no-repeat scroll -120px -10px;;
+            background: url(/images/mychart.jpg) no-repeat scroll -120px -10px;;
             height: 100%;
 
 
@@ -142,6 +142,23 @@ use yii\helpers\Url;
             filter: Alpha(opacity=50);
 
         }
+        
+        .my-footer {
+				height: 30px;
+				background: #000000;
+				color: white;
+				text-align: center;
+				position: fixed;
+				bottom: 0px;
+				width: 100%;
+				left: 0px;
+				;
+				opacity: 0.5;
+				filter: Alpha(opacity=50);
+				line-height: 2.8;
+				font-size: 12px;
+			}
+        
     </style>
 </head>
 
@@ -261,11 +278,11 @@ use yii\helpers\Url;
         <div class="aui-card-list-content aui-padded-5">
             <div class="person">
                 <div class="myvotenum">888</div>
-                <img class="personimg" src="./images/zovz9_kqyuwtdykfbgo2dwgfjeg5sckzsew_290x383.jpg_200x999.jpg" alt="">
+                <img class="personimg" src="/images/zovz9_kqyuwtdykfbgo2dwgfjeg5sckzsew_290x383.jpg_200x999.jpg" alt="">
                 <span class="wlplayer">
 
                 <audio id="12"  preload="none">
-                	<source src="./music/0f82285d8dd225392721813f52218717[1].mp3" type="audio/mpeg">
+                	<source src="/music/0f82285d8dd225392721813f52218717[1].mp3" type="audio/mpeg">
                 </audio>
 
                 </span>
@@ -312,7 +329,7 @@ use yii\helpers\Url;
 <div class="myvote" style="	bottom:50px;">
     <a href="join.html">我要报名</a>
 </div>
-
+<footer class="my-footer">本次活动最终解释权归宣城宛聆音乐</footer>
 <script type="text/template" id="water">
     <% for(var i=0;i< items.length;i++){%>
     <div class="item">
@@ -371,11 +388,11 @@ use yii\helpers\Url;
 </body>
 
 <!--<script src="script/template-web.js"></script>-->
-<script type="text/javascript" src="script/jquery.min.js"></script>
-<script type="text/javascript" src="script/template-native.js"></script>
-<script type="text/javascript" src="script/water.js"></script>
-<script type="text/javascript" src="script/aui-slide.js"></script>
-<script type="text/javascript" src="layui/layui.js"></script>
+<script type="text/javascript" src="/script/jquery.min.js"></script>
+<script type="text/javascript" src="/script/template-native.js"></script>
+<script type="text/javascript" src="/script/water.js"></script>
+<script type="text/javascript" src="/script/aui-slide.js"></script>
+<script type="text/javascript" src="/layui/layui.js"></script>
 <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
 
 
