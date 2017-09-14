@@ -132,7 +132,7 @@ use yii\helpers\Url;
 								<div class="layui-upload">
 									<button type="button" name="upload" class="layui-btn layui-btn-radius  layui-btn-primary" id="uploadimg"> <i class="layui-icon">&#xe64a;</i>上传照片</button>
 									<div class="layui-upload-list">
-										<img class="layui-upload-img" id="demo1">
+										<img class="layui-upload-img" id="demo1" src="">
 										<p id="demoText"></p>
 									</div>
 								</div>
@@ -173,27 +173,24 @@ use yii\helpers\Url;
 
 					/*开始上传图片*/
 					upload.render({
-					elem:'#uploadimg',
-					url:'<?php echo Url::to(['/ajax/default/ajax-upload'])?>',
-					//auto:false,
-					//bindAction:'#yessubmit', //指向一个按钮触发上传
-//					choose: function(obj){
-//					var files=obj.pushFile();
-//						obj.preview(function(index, file, result){
-//   					 console.log(index); //得到文件索引
-//  					  console.log(file); //得到文件对象
-//   					});
-						 before: function(obj){ //obj参数包含的信息，跟 choose回调完全一致，可参见上文。
-   						// layer.load(); //上传loading
- 					 }
-  					,done: function(res, index, upload){
-  	
-  					layer.alert(res.message);
-  					
- 				 }
-						
-					
-					
+                        elem:'#uploadimg',
+                        url:'<?php echo Url::to(['/ajax/default/ajax-upload'])?>',
+                        //auto:false,
+                        //bindAction:'#yessubmit', //指向一个按钮触发上传
+    //					choose: function(obj){
+    //					var files=obj.pushFile();
+    //						obj.preview(function(index, file, result){
+    //   					 console.log(index); //得到文件索引
+    //  					  console.log(file); //得到文件对象
+    //   					});
+                         before: function(obj){ //obj参数包含的信息，跟 choose回调完全一致，可参见上文。
+                            // layer.load(); //上传loading
+                         }
+                        ,done: function(res, index, upload){
+
+                            layer.alert(res.message);
+                            $('.layui-upload-img').attr('src',res.data.file_url);
+                        }
 					});
 					
 					/*开始音频*/

@@ -45,10 +45,12 @@ class DefaultController extends BaseController
      */
     public function actionAjaxUpload(){
         try{
-            if (!isset($_FILES['upload'])){
+
+
+            if (!isset($_FILES['file'])){
                 throw new Exception('未检测到上传文件');
             }
-            $uploadFile = $_FILES['upload'];
+            $uploadFile = $_FILES['file'];
 
             $bucket = 'apply-user';
             $qiniu = new MyQiniu($bucket);
