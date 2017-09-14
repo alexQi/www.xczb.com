@@ -60,7 +60,7 @@
 				;
 				opacity: 0.5;
 				filter: Alpha(opacity=50);
-				line-height: 2.5;
+				line-height: 2.8;
 				font-size: 12px;
 			}
 		</style>
@@ -145,7 +145,7 @@
 
 					<div class="my-btnmarg">
 						<button class="layui-btn layui-btn-radius layui-btn-primary" lay-submit="" lay-filter="" id="yessubmit">
-    	<i class="layui-icon"> &#xe618;</i>立即报名</button>
+    					<i class="layui-icon"> &#xe618;</i>立即报名</button>
 					</div>
 					<br/>
 					<footer class="my-footer">本次活动最终解释权归宣城宛聆音乐</footer>
@@ -170,7 +170,7 @@
 					/*开始上传*/
 					upload.render({
 
-						/*参考http://www.layui.com/doc/modules/upload.html*/
+					/*参考http://www.layui.com/doc/modules/upload.html*/
 
 					});
 
