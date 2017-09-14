@@ -1,3 +1,7 @@
+<?php
+use yii\helpers\Url;
+?>
+
 <!DOCTYPE html>
 <html>
 
@@ -78,7 +82,7 @@
 				<legend>输入基本信息</legend>
 			</fieldset>
 
-			<form class="layui-form" action="action.php">
+			<form class="layui-form" action="">
 				<div class="layui-form-item">
 					<label class="layui-form-label">姓名</label>
 					<div class="layui-input-block">
@@ -126,7 +130,7 @@
 						<div class="layui-col-xs6 ">
 							<div class="my-btnmarg">
 								<div class="layui-upload">
-									<button type="button" class="layui-btn layui-btn-radius  layui-btn-primary" id="uploadimg"> <i class="layui-icon">&#xe64a;</i>上传照片</button>
+									<button type="button" name="upload" class="layui-btn layui-btn-radius  layui-btn-primary" id="uploadimg"> <i class="layui-icon">&#xe64a;</i>上传照片</button>
 									<div class="layui-upload-list">
 										<img class="layui-upload-img" id="demo1">
 										<p id="demoText"></p>
@@ -135,9 +139,9 @@
 							</div>
 						</div>
 						<div class="layui-col-xs6">
-							<div class="my-btnmarg">
-								<button type="button" class="layui-btn layui-btn-radius layui-btn-primary" id="uploadaudio"><i class="layui-icon"> &#xe652;</i>上传音频</button>
-							</div>
+							<!--<div class="my-btnmarg">
+								<button type="button" name="upload" class="layui-btn layui-btn-radius layui-btn-primary" id="uploadaudio"><i class="layui-icon"> &#xe652;</i>上传音频</button>
+							</div>-->
 						</div>
 
 					</div>
@@ -159,22 +163,59 @@
 			<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
 			<script>
 				/*加載Layer和Form*/
-				layui.use(['layer', 'form', 'upload'], function() {
+				layui.use(['layer','form', 'upload'], function() {
 
-					var layer = layui.layer,
-						form = layui.form,
+					//var layer = layui.layer,
+					var	form = layui.form,
 						upload = layui.upload;
 
 					form.render();
 
-					/*开始上传*/
+					/*开始上传图片*/
 					upload.render({
-
-					/*参考http://www.layui.com/doc/modules/upload.html*/
-
+					elem:'#uploadimg',
+					url:'<?php echo Url::to(['/ajax/default/ajax-upload'])?>',
+					//auto:false,
+					//bindAction:'#yessubmit', //指向一个按钮触发上传
+//					choose: function(obj){
+//					var files=obj.pushFile();
+//						obj.preview(function(index, file, result){
+//   					 console.log(index); //得到文件索引
+//  					  console.log(file); //得到文件对象
+//   					});
+						 before: function(obj){ //obj参数包含的信息，跟 choose回调完全一致，可参见上文。
+   						// layer.load(); //上传loading
+ 					 }
+  					,done: function(res, index, upload){
+  	
+  					layer.alert(res.message);
+  					
+ 				 }
+						
+					
+					
 					});
-
-				});
+					
+					/*开始音频*/
+//					upload.render({
+//					elem:'#uploadaudio',
+//					url:'<?php echo Url::to(['/ajax/default/ajax-upload'])?>',
+//					auto:false,
+//					accept:'audio',
+//					bindAction: '#yessubmit', //指向一个按钮触发上传
+//						choose: function(obj){
+//						var files=obj.pushFile();
+//						obj.preview(function(index, file, result){
+//					  console.log(index); //得到文件索引
+// 					  console.log(file); //得到文件对象
+//					});
+//				}
+//						
+//					
+//					});
+					
+});
+				
 			</script>
 
 	</body>
