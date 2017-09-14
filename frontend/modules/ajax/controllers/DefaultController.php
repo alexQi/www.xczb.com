@@ -45,17 +45,13 @@ class DefaultController extends BaseController
      */
     public function actionAjaxUpload(){
         try{
-            if (!yii::$app->request->get('bucket'))
-            {
-                throw new Exception('Bucket未定义');
-            }
             $uploadFile = $_FILES['upload'];
             if (!$uploadFile)
             {
                 throw new Exception('未检测到上传文件');
             }
 
-            $bucket = yii::$app->request->get('bucket');
+            $bucket = 'apply-user';
             $qiniu = new MyQiniu($bucket);
             $key = 'QB'.time();
             $result  = $qiniu->uploadFileGetReturn($uploadFile['tmp_name'],$key);
